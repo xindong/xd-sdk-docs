@@ -184,6 +184,10 @@ Enable Bitcode = NO
 - (void)onLoginFailed:(nullable NSString*)error_msg{
 }
 
+/*登录取消*/
+- (void)onLoginCanceled{
+}
+
 /*登出成功*/
 - (void)onLogoutSucceed{
 }
@@ -237,8 +241,9 @@ Enable Bitcode = NO
 
 类别 | 回调方法
 --- | ---
-登录成功 | \- (void)onLoginSucceed:(nonnull NSString*)access_token;
-登录失败 | \- (void)onLoginFailed:(nullable NSString*)error_msg;
+登录成功 | - (void)onLoginSucceed:(nonnull NSString*)access_token;
+登录失败 | - (void)onLoginFailed:(nullable NSString*)error_msg;
+登录取消 | - (void)onLoginCanceled;
 
 #### 5.5. 获取Access Token
 
@@ -322,9 +327,6 @@ EXT | 否 |额外信息，最长512个字符，服务端支付回调会包含该
 需要注销当前登录用户时调用，该操作不会出现登录界面。
 
 ```
-/**
-* @param key历史原因，忽略该参数，传递0
-*/
 + (void)logout;
 
 ```
