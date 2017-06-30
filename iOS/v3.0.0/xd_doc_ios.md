@@ -1,7 +1,5 @@
 ## <center> 心动SDK（iOS）对接文档 </center>
 
-* [需要遵守的规则](#1)
-
 ### 1.心动SDK介绍
 
 心动SDK主要为游戏提供登录，支付等功能。登录流程和支付流程都需要客户端和服务端同时参与。
@@ -23,7 +21,6 @@
 <p style="color:red">注意，如果游戏需要使用微信分享功能，必须使用心动提供的微信AppID，否则会导致微信登录失败。
 </p>
 
-<span id="1"></span>
 ### 3. 需要遵守的规则
 
 <p>对接过程中，为了避免出现一些奇怪的问题，无特殊需求情况下，请尽量遵守下面的规则。
@@ -192,6 +189,10 @@ Enable Bitcode = NO
 - (void)onLoginCanceled{
 }
 
+/*游客绑定成功*/
+- (void)onBindGuestSucceed:(nonull NSString*)access_token{
+}
+
 /*登出成功*/
 - (void)onLogoutSucceed{
 }
@@ -339,6 +340,15 @@ EXT | 否 |额外信息，最长512个字符，服务端支付回调会包含该
 类别 | 回调方法
 --- | ---
 登出成功 | - (void)onLogoutSucceed;
+
+#### 5.11. 游客升级
+
+当游客账号升级成功时,会触发下列回调。<br/>
+后续如需使用token，务必使用回调给的新token。但已生效的会话无需处理。
+
+类别 | 回调方法
+--- | ---
+游客升级成功 | - (void)onBindGuestSucceed:(nonull NSString*)access_token;
 
 ### 6. 服务端对接
 
