@@ -6,6 +6,7 @@
 
 #### 1.1. 登录流程
 
+
 <image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/01.png"></image>
 
 #### 1.2. 支付流程
@@ -188,6 +189,10 @@ Enable Bitcode = NO
 - (void)onLoginCanceled{
 }
 
+/*游客绑定成功*/
+- (void)onBindGuestSucceed:(nonull NSString*)access_token{
+}
+
 /*登出成功*/
 - (void)onLogoutSucceed{
 }
@@ -335,6 +340,15 @@ EXT | 否 |额外信息，最长512个字符，服务端支付回调会包含该
 类别 | 回调方法
 --- | ---
 登出成功 | - (void)onLogoutSucceed;
+
+#### 5.11. 游客升级
+
+当游客账号升级成功时,会触发下列回调。<br/>
+后续如需使用token，务必使用回调给的新token。但已生效的会话无需处理。
+
+类别 | 回调方法
+--- | ---
+游客升级成功 | - (void)onBindGuestSucceed:(nonull NSString*)access_token;
 
 ### 6. 服务端对接
 
