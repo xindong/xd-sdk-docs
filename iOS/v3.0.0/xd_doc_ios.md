@@ -15,9 +15,9 @@
 	* [4.5处理第三方应用跳回事件](#45处理第三方应用跳回事件)
 	* [4.6Build Settings](#46build-settings)
 * [5.接口调用](#5接口调用)
-	* [5.1配置SDK登录选项](#51配置SDK登录选项)
-	* [5.2实现SDK协议](#52实现SDK协议)
-	* [5.3初始化SDK](#53初始化SDK)
+	* [5.1配置SDK登录选项](#51配置sdk登录选项)
+	* [5.2实现SDK协议](#52实现sdk协议)
+	* [5.3初始化SDK](#53初始化sdk)
 	* [5.4登录](#54登录)
 	* [5.5获取Access Token](#55获取access-token)
 	* [5.6获取当前登录状态](#56获取当前登录状态)
@@ -135,7 +135,7 @@ tencent{QQ AppID}|用于QQ授权登录后跳回|tencent317081|如果给到的心
 
 ```
 
-#### 4.5.处理第三发应用跳回事件
+#### 4.5.处理第三方应用跳回事件
 
 在AppDelegate.m中增加如下两个方法，如果已经存在这些方法，在其中追加相应的处理代码即可。
 
@@ -154,7 +154,7 @@ return [XDCore HandleXDOpenURL:url];
 }
 ```
 
-#### 4.6.Buid Settings
+#### 4.6.Build Settings
 
 Enable Bitcode = NO
 
