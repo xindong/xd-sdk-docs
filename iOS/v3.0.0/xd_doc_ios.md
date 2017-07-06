@@ -156,7 +156,10 @@ return [XDCore HandleXDOpenURL:url];
 
 #### 4.6.Build Settings
 
-Enable Bitcode = NO
+SDK需要配置Bitcode选项 
+Targets -> Build Settings -> Enable Bitcode
+
+Enable Bitcode = NO;
 
 ### 5.接口调用
 
@@ -205,10 +208,12 @@ Enable Bitcode = NO
 }
 
 /*登录成功*/
+/*access_token:登录成功，获取到用户的token。游戏根据token获取用户信息。*/
 - (void)onLoginSucceed:(nonnull NSString*)access_token{
 }
 
 /*登录失败*/
+/*error_msg: 登录失败的报错信息*/
 - (void)onLoginFailed:(nullable NSString*)error_msg{
 }
 
@@ -217,6 +222,9 @@ Enable Bitcode = NO
 }
 
 /*游客绑定成功*/
+/*access_token: 游客升级成功，获取新的token。
+  后续如需使用 token，务必使用回调给的新 token。但已生效的会话无须处理。
+  */
 - (void)onBindGuestSucceed:(nonull NSString*)access_token{
 }
 
@@ -229,6 +237,7 @@ Enable Bitcode = NO
 }
 
 /*支付失败*/
+/*error_msg:支付失败的错误信息*/
 - (void)onPayFailed:(nullable NSString*)error_msg{
 }
 
