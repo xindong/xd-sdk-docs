@@ -346,7 +346,7 @@ EXT | 否 |额外信息，最长512个字符，服务端支付回调会包含该
 
 类别 | 回调方法
 --- | ---
-游客升级成功 | - (void)onBindGuestSucceed:(nonull NSString*)access_token;
+游客升级成功 | - (void)onGuestBindSucceed:(nonull NSString*)access_token;
 
 ### 6. 服务端对接
 
