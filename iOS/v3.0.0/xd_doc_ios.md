@@ -4,6 +4,7 @@
 * [1.心动SDK介绍](#1心动sdk介绍)
 	* [1.1登录流程](#11登录流程)
 	* [1.2支付流程](#12支付流程)
+	* [1.3SDK集成流程](#13sdk集成流程)
 * [2.申请心动AppID](#2申请心动appid)
 * [3.需要遵守的规则](#3需要遵守的规则)
 	* [3.1.回调依赖](#31回调依赖)
@@ -38,9 +39,14 @@
 
 <image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/01.png"></image>
 
+
 #### 1.2.支付流程
 
 <image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/02.png"></image>
+
+#### 1.3.SDK集成流程
+
+<image src="https://static.tapdb.net/web/res/img/upload/2017/07/07/01.png"></image>
 
 
 ### 2.申请心动AppID
