@@ -300,55 +300,55 @@ XDSDK.setWXWeb()	//设置微信为Web 扫码登录方式
 
 ```
 XDSDK.setCallback(new XDCallback() {
-            //初始化成功
+            //初始化成功
             @Override
             public void onInitSucceed() {
 
             }
-            //初始化失败
+            //初始化失败
             @Override
             public void onInitFailed(String msg) {
 
             }
-            //登录成功
+            //登录成功
             @Override
             public void onLoginSucceed(String token) {
                 
             }
 
-            //登录失败
-			@Override
+            //登录失败
+            @Override
             public void onLoginFailed(String msg) {
 				
             }
 
-            //登录取消
+            //登录取消
             @Override
             public void onLoginCanceled() {
 
             }
 
-            //游客绑定成功
+            //游客绑定成功
             @Override
             public void onGuestBindSucceed(String token) {
 
             }
-            //登出成功
+            //登出成功
             @Override
             public void onLogoutSucceed() {
 
             }
-            //支付完成
+            //支付完成
             @Override
             public void onPayCompleted() {
 
             }
-            //支付失败
+            //支付失败
             @Override
             public void onPayFailed(String msg) {
 
             }
-            //支付取消
+            //支付取消
             @Override
             public void onPayCanceled() {
 
