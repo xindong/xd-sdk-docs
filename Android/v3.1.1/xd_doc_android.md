@@ -1,4 +1,4 @@
-## <center> 心动SDK（iOS）对接文档 </center>
+## <center> 心动SDK（Android）对接文档 </center>
 
 ### 目录
 * [1.心动SDK介绍](#1心动sdk介绍)
@@ -51,7 +51,7 @@
 
 ### 2.申请心动AppID
 
-<p>参阅“心动AppID申请介绍”文档，申请心动AppID，获得心动AppID、心动AppKey、微信AppID、QQ AppID。其中心动AppID主要是客户端对接时使用，AppKey主要是服务端对接支付回调时使用。</p>
+<p>参阅“心动AppID申请介绍”文档，申请心动AppID，获得心动AppID、心动AppKey、微信AppID、QQ AppID、Ping++ ID。其中心动AppID主要是客户端对接时使用，AppKey主要是服务端对接支付回调时使用。</p>
 
 <p style="color:red">注意，如果游戏需要使用微信分享功能，必须使用心动提供的微信AppID，否则会导致微信登录失败。
 </p>
@@ -514,7 +514,7 @@ XDSDK.logout();
 
 #### 5.11.退出
 
-调用该方法时，弹出确认框供用户选择是否退出。
+调用该方法时，弹出确认框供用户选择是否退出。
 
 ```
 public static void exit(ExitCallback callback)
