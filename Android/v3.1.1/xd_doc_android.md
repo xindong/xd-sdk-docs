@@ -458,8 +458,8 @@ public static boolean pay(Map<String, String> info)
 参数 | 必须 |说明
 --- | --- |--- 
 Product_Name | 是 |商品名称，建议以游戏名称开头，方便财务对账
-Product_Id | 是 | 商品ID，到AppStore购买的商品
-Product_Price | 是 | 商品价格（单位分），对于AppStore支付，该字段没有用处，但是需要传递真实金额，有多处需要用到
+Product_Id | 是 | 商品ID
+Product_Price | 是 | 商品价格（单位分）
 Sid | 是 |所在服务器ID，不能有特殊字符，服务端支付回调会包含该字段
 Role_Id | 否 | 支付角色ID，服务端支付回调会包含该字段
 OrderId | 否 | 游戏侧订单号，服务端支付回调会包含该字段
