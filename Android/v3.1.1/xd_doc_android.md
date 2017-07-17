@@ -37,12 +37,12 @@
 #### 1.1.登录流程
 
 
-<image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/01.png"></image>
+<image src="img/01.png"></image>
 
 
 #### 1.2.支付流程
 
-<image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/02.png"></image>
+<image src="img/02.png"></image>
 
 #### 1.3.SDK集成流程
 
