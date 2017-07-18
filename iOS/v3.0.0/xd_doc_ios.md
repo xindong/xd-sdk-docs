@@ -391,11 +391,14 @@ method：GET
 成功判断：返回的HTTP Code为200时表示成功，否则失败
 返回数据格式：application/json
 返回值示例：
-{"id":”a13”,"name":"xdname","friendly_name":"xdfriendly_name","client_id":"abc"}
+{"id":"1""name":"xdname","friendly_name":"xdfriendly_name","client_id":"abc","phone":"1","safety":false,"site":"1"}
 id：用户的ID，注意类型是字符串
 name：用户的账号名称
 friendly_name：用户的昵称，如果游戏想要展现用户名称，建议使用该字段
-client_id：该用户首次在该游戏登录时使用的心动AppID
+client_id：该用户在该游戏登录时使用的心动AppID
+phone : 绑定的手机号码
+safety: 账号是否安全/通过设备二次验证（true：安全，false：不安全）
+site: 账号类型, 0 => vc账号，1 => 心动账号，3 => qq账号，8 => 微信账号，注意类型是字符串
 ```
 #### 6.2.	处理支付回调
 游戏服务端需要提供一个能够处理支付回调的接口，这个接口是申请心动AppID时需要的。处理逻辑中，需要使用一个密钥进行加密验证，该密钥即为心动AppKey。
