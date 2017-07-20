@@ -191,7 +191,11 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 #### 4.6.接入微信分享处理
 
 <p>心动SDK目前仅提供微信登录功能，如果游戏需要使用微信分享功能，需要自行接入微信分享功能。需要注意下面几点。</p>
-<p style="color:red">微信分享的微信AppID必须使用心动提供的微信AppID，否则会导致微信登录失败。</p>
+
+```diff
+- 微信分享的微信AppID必须使用心动提供的微信AppID，否则会导致微信登录失败
+```
+
 <p>接入其它SDK提供的微信分享功能时，会被要求在项目中增加一个类“{游戏包名}.wxapi.WXEntryActivity”，这个类可能是复制SDK提供的一个类，或者继承SDK的一个类。无论如何，将其修改为另一个名字，比如“{游戏包名}.wxapi.MYWXEntryActivity”。</p>
 <p>需要按照文章前面Activity配置中的注释说明，修改Activity配置内容，并且需要在游戏项目中增加“{游戏包名}.wxapi.WXEntryActivity”类，内容如下，注意替换代码中花括号括起来的需要游戏自定的内容。</p>
 
