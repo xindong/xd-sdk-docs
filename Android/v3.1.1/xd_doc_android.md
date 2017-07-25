@@ -104,7 +104,7 @@ res | 包含心动SDK需要的资源文件
 
 #### 4.4.声明相关的Activity
 
-```
+```diff
 <application>
     <activity
         android:name="com.xd.sdklib.helper.XDStartView"
@@ -119,18 +119,18 @@ res | 包含心动SDK需要的资源文件
         android:name="com.xd.sdklib.helper.WXEntryActivity"
         android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
-    <!-- 微信登录，仅在游戏不接入其它微信分享SDK时使用该方法 -->
+-   <!-- 微信登录，仅在游戏不接入其它微信分享SDK时使用该方法 -->
     <activity-alias
         android:name=".wxapi.WXEntryActivity"
         android:exported="true"
         android:targetActivity="com.xd.sdklib.helper.WXEntryActivity"/>
 
-    <!-- 微信登录和分享，游戏接入了其它微信分享SDK时必须使用该方法，并按照文章后面的内容进行处理
+-   <!-- 微信登录和分享，游戏接入了其它微信分享SDK时必须使用该方法，并按照文章后面的内容进行处理
     <activity
         android:name=".wxapi.WXEntryActivity"
         android:label="@string/app_name"
-        android:exported="true"/>
-    -->
+        android:exported="true"/>
+-   -->
 
     <!-- Ping++ SDK -->
     <activity
@@ -192,9 +192,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 <p>心动SDK目前仅提供微信登录功能，如果游戏需要使用微信分享功能，需要自行接入微信分享功能。需要注意下面几点。</p>
 
-```diff
-- 微信分享的微信AppID必须使用心动提供的微信AppID，否则会导致微信登录失败
-```
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `微信分享的微信AppID必须使用心动提供的微信AppID，否则会导致微信登录失败`
 
 <p>接入其它SDK提供的微信分享功能时，会被要求在项目中增加一个类“{游戏包名}.wxapi.WXEntryActivity”，这个类可能是复制SDK提供的一个类，或者继承SDK的一个类。无论如何，将其修改为另一个名字，比如“{游戏包名}.wxapi.MYWXEntryActivity”。</p>
 <p>需要按照文章前面Activity配置中的注释说明，修改Activity配置内容，并且需要在游戏项目中增加“{游戏包名}.wxapi.WXEntryActivity”类，内容如下，注意替换代码中花括号括起来的需要游戏自定的内容。</p>
@@ -546,7 +544,7 @@ XDSDK.exit(new ExitCallback() {
 #### 6.1.获取用户信息
 游戏服务端使用客户端获取的access token，按照下面的方式获取用户信息。
 
-```
+``` diff
 接口：https://api.xd.com/v1/user
 method：GET
 参数：access_token
@@ -555,7 +553,8 @@ method：GET
 返回数据格式：application/json
 返回值示例：
 {"id":"1""name":"xdname","friendly_name":"xdfriendly_name","client_id":"abc","phone":"1","safety":false,"site":"1"}
-id：用户的ID，注意类型是字符串
+id：用户的ID
+- 注意类型是字符串
 name：用户的账号名称
 friendly_name：用户的昵称，如果游戏想要展现用户名称，建议使用该字段
 client_id：该用户在该游戏登录时使用的心动AppID
@@ -579,7 +578,7 @@ method：POST
 --- | --- | ---
 order_id | number | 心动平台的订单号，相同订单号表示是同一笔支付
 payment | string | 支付方式，appstore或其它（若回调无该字段，则默认为appstore）
-user_id | string | 充值用户ID，注意类型是字符串
+user_id | string | 充值用户ID   ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `注意类型是字符串`
 client_id | string | 充值的心动AppID
 app | string | 同client_id
 app_id | string | 游戏客户端调用充值时传递的Sid字段
@@ -609,12 +608,11 @@ return strcasecmp($sign, md5(http_build_query($tmp) . $appKey)) == 0;
 ```
 <p style="color:red">
 需要注意
-<br/>
-1、游戏服务端应该按照order_id进行排重，相同order_id仅生效一次。
-<br/>
-2、游戏服务端成功处理了支付回调后，应当返回字符串“success”，如果是一笔已经处理的重复的订单，也应该返回“success”。
-<br/>
-3、只要通过签名校验的回调，都应该视为合法数据，按照如下逻辑发放道具。A.如果payment字段为appstore，即AppStore支付，直接按照product_id字段进行道具发放；B.如果payment字段为其它值，需要验证gold字段和 product_id 字段是否相符，如果相符，按照product_id发放道具，如果不相符，直接按照gold字段折算成对应的游戏货币发放。
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `游戏服务端应该按照order_id进行排重，相同order_id仅生效一次`
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `游戏服务端成功处理了支付回调后，应当返回字符串“success”，如果是一笔已经处理的重复的订单，也应该返回“success”。`
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `只要通过签名校验的回调，都应该视为合法数据，按照如下逻辑发放道具。A.如果payment字段为appstore，即AppStore支付，直接按照product_id字段进行道具发放；B.如果payment字段为其它值，需要验证gold字段和 product_id 字段是否相符，如果相符，按照product_id发放道具，如果不相符，直接按照gold字段折算成对应的游戏货币发放。`
+
 </p>
 
 
