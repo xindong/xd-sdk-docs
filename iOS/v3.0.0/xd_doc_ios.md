@@ -442,16 +442,10 @@ return strcasecmp($sign, md5(http_build_query($tmp) . $appKey)) == 0;
 }
 ```
 
-![](https://placehold.it/12/ff0000/000000?text=+) 需要注意 ![](https://placehold.it/12/ff0000/000000?text=+)
+![](https://placehold.it/12/ff0000/000000?text=+) 需要注意
 
-![](https://placehold.it/12/ff0000/000000?text=+) 1、游戏服务端应该按照order_id进行排重，相同order_id仅生效一次。 ![](https://placehold.it/12/ff0000/000000?text=+)
+![](https://placehold.it/12/ff0000/000000?text=+) 1、游戏服务端应该按照order_id进行排重，相同order_id仅生效一次。
 
-![](https://placehold.it/12/ff0000/000000?text=+) 2、游戏服务端成功处理了支付回调后，应当返回字符串“success”，如果是一笔已经处理的重复的订单，也应该返回“success”。 ![](https://placehold.it/12/ff0000/000000?text=+)
+![](https://placehold.it/12/ff0000/000000?text=+) 2、游戏服务端成功处理了支付回调后，应当返回字符串“success”，如果是一笔已经处理的重复的订单，也应该返回“success”。
 
-![](https://placehold.it/12/ff0000/000000?text=+) 3、只要通过签名校验的回调，都应该视为合法数据，按照如下逻辑发放道具。A.如果payment字段为appstore，即AppStore支付，直接按照product_id字段进行道具发放；B.如果payment字段为其它值，需要验证gold字段和 product_id 字段是否相符，如果相符，按照product_id发放道具，如果不相符，直接按照gold字段折算成对应的游戏货币发放。 ![](https://placehold.it/12/ff0000/000000?text=+)
-
-
-
-
-
-
+![](https://placehold.it/12/ff0000/000000?text=+) 3、只要通过签名校验的回调，都应该视为合法数据，按照如下逻辑发放道具。A.如果payment字段为appstore，即AppStore支付，直接按照product_id字段进行道具发放；B.如果payment字段为其它值，需要验证gold字段和 product_id 字段是否相符，如果相符，按照product_id发放道具，如果不相符，直接按照gold字段折算成对应的游戏货币发放。
