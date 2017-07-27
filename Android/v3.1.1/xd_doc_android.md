@@ -32,27 +32,32 @@
 	* [6.2处理支付回调](#62处理支付回调)
 	
 <span id="1心动sdk介绍">
+
 ### 1.心动SDK介绍
 
 心动SDK主要为游戏提供登录，支付等功能。登录流程和支付流程都需要客户端和服务端同时参与。
 
 <span id="11登录流程">
+
 #### 1.1.登录流程
 
 
 <image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/01.png"></image>
 
 <span id="12支付流程">
+
 #### 1.2.支付流程
 
 <image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/02.png"></image>
 
 <span id="13sdk集成流程">
+
 #### 1.3.SDK集成流程
 
 <image src="https://static.tapdb.net/web/res/img/upload/2017/07/27/01.png"></image>
 
 <span id="2申请心动appid">
+
 ### 2.申请心动AppID
 
 <p>参阅“心动AppID申请介绍”文档，申请心动AppID，获得心动AppID、心动AppKey、微信AppID、QQ AppID、Ping++ ID。其中心动AppID主要是客户端对接时使用，AppKey主要是服务端对接支付回调时使用。</p>
@@ -61,12 +66,14 @@
 </p>
 
 <span id="3需要遵守的规则">
+
 ### 3.需要遵守的规则
 
 <p>对接过程中，为了避免出现一些奇怪的问题，无特殊需求情况下，请尽量遵守下面的规则。
 </p>
 
 <span id="31回调依赖">
+
 #### 3.1.回调依赖
 
 <p>游戏调用SDK的功能，SDK通常会以回调形式通知到游戏，除了必须依赖的回调（如登录成功回调），其它回调尽可能不依赖。此场景适用于登录、打开用户中心、支付。</p>
@@ -78,9 +85,11 @@
 <p>总之游戏尽可能保证功能一直处于可用状态，而不依赖SDK的状态。</p>
 
 <span id="4接入sdk">
+
 ### 4.接入SDK
 
 <span id="41获取sdk">
+
 #### 4.1.获取SDK
 
 <p>从心动平台处获取SDK，其中SDKLib目录就是心动SDK项目，可以直接导入eclipse中作为Library项目。如果不是使用eclipse作为IDE的项目，需要保证相关的文件都被正确导入到项目中。SDKLib中的主要文件或目录用途如下。</p>
@@ -91,11 +100,13 @@ libs | 包含心动SDK的库和其它依赖库
 res | 包含心动SDK需要的资源文件
 
 <span id="42添加android支持库">
+
 #### 4.2.添加Android支持库
 
 <p>添加Android v4支持库android-support-v4.jar到项目中。</p>
 
 <span id="43添加需要的权限">
+
 #### 4.3.添加需要的权限
 
 ```
@@ -111,6 +122,7 @@ res | 包含心动SDK需要的资源文件
 ```
 
 <span id="44声明相关的activity">
+
 #### 4.4.声明相关的Activity
 
 ```diff
@@ -186,6 +198,7 @@ res | 包含心动SDK需要的资源文件
 ```
 
 <span id="45接收返回值">
+
 #### 4.5.接收返回值
 
 在初始化XDSDK的Activity中，增加如下处理。
@@ -199,6 +212,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 
 <span id="46接入微信分享处理">
+
 #### 4.6.接入微信分享处理
 
 <p>心动SDK目前仅提供微信登录功能，如果游戏需要使用微信分享功能，需要自行接入微信分享功能。需要注意下面几点。</p>
@@ -286,11 +300,13 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
 ```
 
 <span id="5接口调用">
+
 ### 5.接口调用
 
 <p>所有接口设计为静态方法，在com.xd.xdsdk.XDSDK中调用。</p>
 
 <span id="51配置sdk登录选项">
+
 #### 5.1.配置SDK登录选项
 
 <p>心动SDK提供配置QQ、微信登录、游客登录的显示与隐藏以及登录方式。</p>
@@ -309,6 +325,7 @@ XDSDK.setWXWeb()	//设置微信为Web 扫码登录方式
 ```
 
 <span id="52设置回调">
+
 #### 5.2.设置回调
 
 <p>游戏调用心动SDK的接口后，大部分情况都是通过回调的形式将结果返回给游戏，所以需要先设置对应的回调函数。</p>
@@ -374,6 +391,7 @@ XDSDK.setCallback(new XDCallback() {
 ```
 
 <span id="53初始化sdk">
+
 #### 5.3.初始化SDK
 
 初始化心动SDK，调用该接口是调用其它功能接口的必要条件。
@@ -400,6 +418,7 @@ XDSDK.initSDK(this, "xxxxxxxxxxxxxx", 0);
 初始化失败 | public void onInitFailed(String msg)
 
 <span id="54登录">
+
 #### 5.4.登录
 
 调用该接口进行登录。
@@ -423,6 +442,7 @@ XDSDK.login();
 登录取消 | public void onLoginCanceled()
 
 <span id="55获取access-token">
+
 #### 5.5.获取Access Token
 
 调用该接口获取当前登录用户的access token。
@@ -437,6 +457,7 @@ XDSDK.getAccessToken()
 ```
 
 <span id="56获取当前登录状态">
+
 #### 5.6.获取当前登录状态
 
 调用该接口获取当前登录状态。
@@ -450,6 +471,7 @@ XDSDK.isLoggedIn()
 ```
 
 <span id="57打开用户中心">
+
 #### 5.7.打开用户中心
 
 调用该接口打开用户中心界面，用户可以在该界面进行登出和登录操作，游戏注意正确处理回调。在未登录状态，无法打开用户中心。在用户中心中，用户可进行登出操作，此时交互界面将消失。游戏需要提供引导用户重新进行登录的操作界面。
@@ -466,6 +488,7 @@ XDSDK.openUserCenter()
 ```
 
 <span id="58发起支付">
+
 #### 5.8.发起支付
 调用该接口发起支付。
 <p style='color:red'>不保证在任何情况下都能收到回调，请勿直接使用SDK返回的支付结果作为最终判定订单状态的依据。</p>
@@ -510,6 +533,7 @@ XDSDK.pay(info);
 ```
 
 <span id="59登出">
+
 #### 5.9.登出
 需要注销当前登录用户时调用，该操作不会出现登录界面。
 
@@ -528,6 +552,7 @@ XDSDK.logout();
 ```
 
 <span id="510游客升级">
+
 #### 5.10.游客升级
 
 当游客账号升级成功时,会触发下列回调。<br/>
@@ -538,6 +563,7 @@ XDSDK.logout();
 游客升级成功 | public void onGuestBindSucceed(String token)
 
 <span id="511退出">
+
 #### 5.11.退出
 
 调用该方法时，弹出确认框供用户选择是否退出。
@@ -563,9 +589,11 @@ XDSDK.exit(new ExitCallback() {
 ```
 
 <span id="6服务端对接">
+
 ### 6.服务端对接
 
 <span id="61获取用户信息">
+
 #### 6.1.获取用户信息
 游戏服务端使用客户端获取的access token，按照下面的方式获取用户信息。
 
@@ -588,8 +616,9 @@ safety： 账号是否安全/通过设备二次验证（true：安全，false：
 site：账号类型, 0 => vc账号，1 => 心动账号，3 => qq账号，8 => 微信账号，注意类型是字符串
 ``` 
 
-<span id="62处理支付回调">        
-#### 6.2.	处理支付回调
+<span id="62处理支付回调"> 
+
+#### 6.2.处理支付回调
 游戏服务端需要提供一个能够处理支付回调的接口，这个接口是申请心动AppID时需要的。处理逻辑中，需要使用一个密钥进行加密验证，该密钥即为心动AppKey。
 当心动平台处有充值成功时，心动服务端会通知到支付回调接口，信息如下。
 
