@@ -520,6 +520,7 @@ EXT | 否 |额外信息，最长512个字符，服务端支付回调会包含该
 支付取消 | public void onPayCanceled()
 
 示例代码
+
 ```
 Map<String, String> info = new HashMap<String, String>();
 info.put("OrderId", "1234567890123456789012345678901234567890");
