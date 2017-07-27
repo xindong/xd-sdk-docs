@@ -30,26 +30,31 @@
 	* [6.2处理支付回调](#62处理支付回调)
 
 <span id="1心动sdk介绍">
+
 ### 1.心动SDK介绍
 
 心动SDK主要为游戏提供登录，支付等功能。登录流程和支付流程都需要客户端和服务端同时参与。
 
 <span id="11登录流程">
+
 #### 1.1.登录流程
 
 <image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/01.png"></image>
 
 <span id="12支付流程">
+
 #### 1.2.支付流程
 
 <image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/02.png"></image>
 
 <span id="13sdk集成流程">
+
 #### 1.3.SDK集成流程
 
 <image src="https://static.tapdb.net/web/res/img/upload/2017/07/07/01.png"></image>
 
 <span id="2申请心动appid">
+
 ### 2.申请心动AppID
 
 <p>参阅“心动AppID申请介绍”文档，申请心动AppID，获得心动AppID、心动AppKey、微信AppID、QQ AppID。其中心动AppID主要是客户端对接时使用，AppKey主要是服务端对接支付回调时使用。</p>
@@ -58,12 +63,14 @@
 </p>
 
 <span id="3需要遵守的规则">
+
 ### 3.需要遵守的规则
 
 <p>对接过程中，为了避免出现一些奇怪的问题，无特殊需求情况下，请尽量遵守下面的规则。
 </p>
 
 <span id="31回调依赖">
+
 #### 3.1.回调依赖
 
 <p>游戏调用SDK的功能，SDK通常会以回调形式通知到游戏，除了必须依赖的回调（如登录成功回调），其它回调尽可能不依赖。此场景适用于登录、打开用户中心、支付。</p>
@@ -75,9 +82,11 @@
 <p>总之游戏尽可能保证功能一直处于可用状态，而不依赖SDK的状态。</p>
 
 <span id="4接入sdk">
+
 ### 4.接入SDK
 
 <span id="41获取sdk">
+
 #### 4.1.获取SDK
 
 从心动平台处获取SDK，其中主要的文件或目录用途如下。
@@ -90,6 +99,7 @@ resource | 心动SDK需要或依赖的资源文件，需要保证所有文件都
 libs | 心动SDK依赖的其它库文件，需要添加到项目依赖中
 
 <span id="42添加系统依赖库">
+
 #### 4.2.添加系统依赖库
 
 ```
@@ -108,6 +118,7 @@ libz.tbd
 libicucore.tbd
 ```
 <span id="43设置url-types">
+
 #### 4.3.设置URL Types
 
 需要在Xcode中设置多个URL Types，URL Types主要是需要设置URL Schemes，其它选项可任意填写。按照下面表格的内容填写，注意替换其中的各项AppID。
@@ -119,6 +130,7 @@ XD-{心动AppID}|用于支付宝支付后跳回|XD-ci2dos1ktzsca4f
 tencent{QQ AppID}|用于QQ授权登录后跳回|tencent317081|如果给到的心动AppID没有对应的QQ AppID，可以不配置该项
 
 <span id="44配置infoplist">
+
 #### 4.4.配置info.plist
 
 修改项目的info.plist，在<dict>节点中添加下列内容。修改的内容主要为了保证QQ和微信登录能够正常运行。
@@ -149,6 +161,7 @@ tencent{QQ AppID}|用于QQ授权登录后跳回|tencent317081|如果给到的心
 ```
 
 <span id="45处理第三方应用跳回事件">
+
 #### 4.5.处理第三方应用跳回事件
 
 在AppDelegate.m中增加如下两个方法，如果已经存在这些方法，在其中追加相应的处理代码即可。
@@ -169,9 +182,11 @@ return [XDCore HandleXDOpenURL:url];
 ```
 
 <span id="5接口调用">
+
 ### 5.接口调用
 
 <span id="51配置sdk登录选项">
+
 #### 5.1.配置SDK登录选项
 
 <p>心动SDK提供配置QQ、微信登录、游客登录的显示与隐藏以及登录方式。</p>
@@ -191,6 +206,7 @@ return [XDCore HandleXDOpenURL:url];
 ```
 
 <span id="52实现sdk协议">
+
 #### 5.2.实现SDK协议
 
 游戏调用SDK接口后，结果以Protocol方式回调给游戏，游戏需要实现XDCallback.h中声明的方法。
@@ -256,6 +272,7 @@ return [XDCore HandleXDOpenURL:url];
 ```
 
 <span id="53初始化sdk">
+
 #### 5.3.初始化SDK
 
 初始化心动SDK，调用该接口是调用其它功能接口的必要条件。
@@ -278,6 +295,7 @@ return [XDCore HandleXDOpenURL:url];
 初始化失败 | -(void)onInitFailed:(nullable NSString*)error_msg
 
 <span id="54登录">
+
 #### 5.4.登录
 
 调用该接口进行登录。
@@ -297,6 +315,7 @@ return [XDCore HandleXDOpenURL:url];
 登录取消 | - (void)onLoginCanceled;
 
 <span id="55获取access-token">
+
 #### 5.5.获取Access Token
 
 调用该接口获取当前登录用户的access token。
@@ -309,6 +328,7 @@ return [XDCore HandleXDOpenURL:url];
 ```
 
 <span id="56获取当前登录状态">
+
 #### 5.6.获取当前登录状态
 
 调用该接口获取当前登录状态。
@@ -322,6 +342,7 @@ return [XDCore HandleXDOpenURL:url];
 ```
 
 <span id="57打开用户中心">
+
 #### 5.7.打开用户中心
 
 调用该接口打开用户中心界面，用户可以在该界面进行登出和登录操作，游戏注意正确处理回调。在未登录状态，无法打开用户中心。在用户中心中，用户可进行登出操作，此时交互界面将消失。游戏需要提供引导用户重新进行登录的操作界面。
@@ -334,7 +355,8 @@ return [XDCore HandleXDOpenURL:url];
 ```
 
 <span id="58发起支付">
-#### 5.8.	发起支付
+
+#### 5.8.发起支付
 调用该接口发起支付。当前版本SDK仅支持AppStore支付。
 
 ```
@@ -365,6 +387,7 @@ EXT | 否 |额外信息，最长512个字符，服务端支付回调会包含该
 支付取消 | - (void)onPayCanceled;
 
 <span id="59登出">
+
 #### 5.9.登出
 需要注销当前登录用户时调用，该操作不会出现登录界面。
 
@@ -379,6 +402,7 @@ EXT | 否 |额外信息，最长512个字符，服务端支付回调会包含该
 登出成功 | - (void)onLogoutSucceed;
 
 <span id="510游客升级">
+
 #### 5.10.游客升级
 
 当游客账号升级成功时,会触发下列回调。<br/>
@@ -389,9 +413,11 @@ EXT | 否 |额外信息，最长512个字符，服务端支付回调会包含该
 游客升级成功 | - (void)onGuestBindSucceed:(nonull NSString*)access_token;
 
 <span id="61服务端对接">
+
 ### 6.服务端对接
 
 <span id="61获取用户信息">
+
 #### 6.1.获取用户信息
 游戏服务端使用客户端获取的access token，按照下面的方式获取用户信息。
 
@@ -413,7 +439,8 @@ safety： 账号是否安全/通过设备二次验证（true：安全，false：
 site：账号类型, 0 => vc账号，1 => 心动账号，3 => qq账号，8 => 微信账号，注意类型是字符串
 ```
 <span id="62处理支付回调">
-#### 6.2.	处理支付回调
+
+#### 6.2.处理支付回调
 游戏服务端需要提供一个能够处理支付回调的接口，这个接口是申请心动AppID时需要的。处理逻辑中，需要使用一个密钥进行加密验证，该密钥即为心动AppKey。
 当心动平台处有充值成功时，心动服务端会通知到支付回调接口，信息如下。
 
