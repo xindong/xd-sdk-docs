@@ -442,7 +442,7 @@ return strcasecmp($sign, md5(http_build_query($tmp) . $appKey)) == 0;
 }
 ```
 <p style="color:red">
-![warning](https://placehold.it/15/ff0000/000000?text=+)需要注意
+![](https://placehold.it/15/ff0000/000000?text=+) 需要注意
 <br/>
 1、游戏服务端应该按照order_id进行排重，相同order_id仅生效一次。
 <br/>
