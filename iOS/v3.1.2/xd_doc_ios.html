@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>xd_doc_ios</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h2 id="toc_0"><center> 心动SDK（iOS）对接文档 </center></h2>
+
+<h3 id="toc_1">目录</h3>
+
+<ul>
+<li><a href="#1%E5%BF%83%E5%8A%A8sdk%E4%BB%8B%E7%BB%8D">1.心动SDK介绍</a>
+
+<ul>
+<li><a href="#11%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B">1.1登录流程</a></li>
+<li><a href="#12%E6%94%AF%E4%BB%98%E6%B5%81%E7%A8%8B">1.2支付流程</a></li>
+<li><a href="#13sdk%E9%9B%86%E6%88%90%E6%B5%81%E7%A8%8B">1.3SDK集成流程</a></li>
+</ul></li>
+<li><a href="#2%E7%94%B3%E8%AF%B7%E5%BF%83%E5%8A%A8appid">2.申请心动AppID</a></li>
+<li><a href="#3%E9%9C%80%E8%A6%81%E9%81%B5%E5%AE%88%E7%9A%84%E8%A7%84%E5%88%99">3.需要遵守的规则</a>
+
+<ul>
+<li><a href="#31%E5%9B%9E%E8%B0%83%E4%BE%9D%E8%B5%96">3.1.回调依赖</a></li>
+</ul></li>
+<li><a href="#4%E6%8E%A5%E5%85%A5sdk">4.接入SDK</a>
+
+<ul>
+<li><a href="#41%E8%8E%B7%E5%8F%96sdk">4.1获取SDK</a></li>
+<li><a href="#42%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E4%BE%9D%E8%B5%96%E5%BA%93">4.2添加系统依赖库</a></li>
+<li><a href="#43%E8%AE%BE%E7%BD%AEurl-types">4.3设置URL Types</a></li>
+<li><a href="#44%E9%85%8D%E7%BD%AEinfoplist">4.4配置info.plist</a></li>
+<li><a href="#45%E5%A4%84%E7%90%86%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8%E8%B7%B3%E5%9B%9E%E4%BA%8B%E4%BB%B6">4.5处理第三方应用跳回事件</a></li>
+</ul></li>
+<li><a href="#5%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8">5.接口调用</a>
+
+<ul>
+<li><a href="#51%E9%85%8D%E7%BD%AEsdk%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9">5.1配置SDK登录选项</a></li>
+<li><a href="#52%E5%AE%9E%E7%8E%B0sdk%E5%8D%8F%E8%AE%AE">5.2实现SDK协议</a></li>
+<li><a href="#53%E5%88%9D%E5%A7%8B%E5%8C%96sdk">5.3初始化SDK</a></li>
+<li><a href="#54%E7%99%BB%E5%BD%95">5.4登录</a></li>
+<li><a href="#55%E8%8E%B7%E5%8F%96access-token">5.5获取Access Token</a></li>
+<li><a href="#56%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81">5.6获取当前登录状态</a></li>
+<li><a href="#57%E6%89%93%E5%BC%80%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83">5.7打开用户中心</a></li>
+<li><a href="#58%E5%8F%91%E8%B5%B7%E6%94%AF%E4%BB%98">5.8发起支付</a></li>
+<li><a href="#59%E7%99%BB%E5%87%BA">5.9登出</a></li>
+<li><a href="#510%E6%B8%B8%E5%AE%A2%E5%8D%87%E7%BA%A7">5.10游客升级</a></li>
+<li><a href="#511%E5%BE%AE%E4%BF%A1%E5%88%86%E4%BA%AB">5.11微信分享</a></li>
+</ul></li>
+<li><a href="#6%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AF%B9%E6%8E%A5">6服务端对接</a>
+
+<ul>
+<li><a href="#61%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF">6.1获取用户信息</a></li>
+<li><a href="#62%E5%A4%84%E7%90%86%E6%94%AF%E4%BB%98%E5%9B%9E%E8%B0%83">6.2处理支付回调</a></li>
+</ul></li>
+</ul>
+
+<p><span id="1心动sdk介绍"></p>
+
+<h3 id="toc_2">1.心动SDK介绍</h3>
+
+<p>心动SDK主要为游戏提供登录，支付等功能。登录流程和支付流程都需要客户端和服务端同时参与。</p>
+
+<p><span id="11登录流程"></p>
+
+<h4 id="toc_3">1.1.登录流程</h4>
+
+<p><image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/01.png"></image></p>
+
+<p><span id="12支付流程"></p>
+
+<h4 id="toc_4">1.2.支付流程</h4>
+
+<p><image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/02.png"></image></p>
+
+<p><span id="13sdk集成流程"></p>
+
+<h4 id="toc_5">1.3.SDK集成流程</h4>
+
+<p><image src="https://static.tapdb.net/web/res/img/upload/2017/07/07/01.png"></image></p>
+
+<p><span id="2申请心动appid"></p>
+
+<h3 id="toc_6">2.申请心动AppID</h3>
+
+<p>参阅“心动AppID申请介绍”文档，申请心动AppID，获得心动AppID、心动AppKey、微信AppID、QQ AppID。其中心动AppID主要是客户端对接时使用，AppKey主要是服务端对接支付回调时使用。</p>
+
+<p style="color:red">注意，如果游戏需要使用微信分享功能，必须使用心动提供的微信AppID，否则会导致微信登录失败。
+</p>
+
+<p><span id="3需要遵守的规则"></p>
+
+<h3 id="toc_7">3.需要遵守的规则</h3>
+
+<p>对接过程中，为了避免出现一些奇怪的问题，无特殊需求情况下，请尽量遵守下面的规则。
+</p>
+
+<p><span id="31回调依赖"></p>
+
+<h4 id="toc_8">3.1.回调依赖</h4>
+
+<p>游戏调用SDK的功能，SDK通常会以回调形式通知到游戏，除了必须依赖的回调（如登录成功回调），其它回调尽可能不依赖。此场景适用于登录、打开用户中心、支付。</p>
+
+<p>比如游戏登录，通常是游戏提供一个登录按钮，用户点击后调用SDK登录，此时有两种处理方式。A、点击后，游戏隐藏登录按钮或使用loading图标盖住，等收到SDK登录失败回调时，才会再次展现登录按钮或移除loading。B、无论是否收到回调，都保证按钮处理可点状态。</p>
+
+<p>建议游戏使用后者，防止意外情况下，流程无法走通，用户无法继续操作的情况。另外也可以采用后者的优化版，即用户点击后，仅屏蔽按钮1秒钟，这样可以防止用户反复点击导致SDK接口被反复调用。</p>
+
+<p>总之游戏尽可能保证功能一直处于可用状态，而不依赖SDK的状态。</p>
+
+<p><span id="4接入sdk"></p>
+
+<h3 id="toc_9">4.接入SDK</h3>
+
+<p><span id="41获取sdk"></p>
+
+<h4 id="toc_10">4.1.获取SDK</h4>
+
+<p>从心动平台处获取SDK，其中主要的文件或目录用途如下。</p>
+
+<table>
+<thead>
+<tr>
+<th>目录或文件</th>
+<th>用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>XdComPlatform.framework</td>
+<td>心动SDK的主要库文件，需要添加到项目依赖中</td>
+</tr>
+<tr>
+<td>XDStore.framework</td>
+<td>心动SDK支付组建，需要添加到项目依赖库中</td>
+</tr>
+<tr>
+<td>resource</td>
+<td>心动SDK需要或依赖的资源文件，需要保证所有文件都被添加到了Xcode的“Copy Bundle Resources”中</td>
+</tr>
+<tr>
+<td>libs</td>
+<td>心动SDK依赖的其它库文件，需要添加到项目依赖中</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="42添加系统依赖库"></p>
+
+<h4 id="toc_11">4.2.添加系统依赖库</h4>
+
+<div><pre><code class="language-none">Security.framework 
+CFNetwork.framework
+UIKit.framework
+QuartzCore.framework
+Foundation.framework
+CoreGraphics.Framework
+CoreTelephony.framework
+SystemConfiguration.framework
+libiconv.tbd
+libsqlite3.tbd
+libstdc++.tbd
+libz.tbd
+libicucore.tbd</code></pre></div>
+
+<p><span id="43设置url-types"></p>
+
+<h4 id="toc_12">4.3.设置URL Types</h4>
+
+<p>需要在Xcode中设置多个URL Types，URL Types主要是需要设置URL Schemes，其它选项可任意填写。按照下面表格的内容填写，注意替换其中的各项AppID。</p>
+
+<table>
+<thead>
+<tr>
+<th>URL Schemes</th>
+<th>用途</th>
+<th>示例</th>
+<th>备注</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>XD-{心动AppID}</td>
+<td>用于支付宝支付后跳回</td>
+<td>XD-ci2dos1ktzsca4f</td>
+<td></td>
+</tr>
+<tr>
+<td>{微信AppID}</td>
+<td>用于微信授权登录后跳回</td>
+<td>wx19f231d77ac408d9</td>
+<td></td>
+</tr>
+<tr>
+<td>tencent{QQ AppID}</td>
+<td>用于QQ授权登录后跳回</td>
+<td>tencent317081</td>
+<td>如果给到的心动AppID没有对应的QQ AppID，可以不配置该项</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="44配置infoplist"></p>
+
+<h4 id="toc_13">4.4.配置info.plist</h4>
+
+<p>修改项目的info.plist，在<dict>节点中添加下列内容。修改的内容主要为了保证QQ和微信登录能够正常运行。</p>
+
+<div><pre><code class="language-none">&lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt;
+&lt;array&gt;
+&lt;string&gt;mqq&lt;/string&gt;
+&lt;string&gt;mqqapi&lt;/string&gt;
+&lt;string&gt;wtloginmqq2&lt;/string&gt;
+&lt;string&gt;mqqopensdkapiV4&lt;/string&gt;
+&lt;string&gt;mqqopensdkapiV3&lt;/string&gt;
+&lt;string&gt;mqqopensdkapiV2&lt;/string&gt;
+&lt;string&gt;mqqwpa&lt;/string&gt;
+&lt;string&gt;mqqOpensdkSSoLogin&lt;/string&gt;
+&lt;string&gt;mqqgamebindinggroup&lt;/string&gt;
+&lt;string&gt;mqqopensdkfriend&lt;/string&gt;
+&lt;string&gt;mqzone&lt;/string&gt;
+&lt;string&gt;weixin&lt;/string&gt;
+&lt;string&gt;wechat&lt;/string&gt;
+&lt;/array&gt;
+&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;
+&lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;
+&lt;true/&gt;
+&lt;/dict&gt;
+</code></pre></div>
+
+<p><span id="45处理第三方应用跳回事件"></p>
+
+<h4 id="toc_14">4.5.处理第三方应用跳回事件</h4>
+
+<p>在AppDelegate.m中增加如下两个方法，如果已经存在这些方法，在其中追加相应的处理代码即可。</p>
+
+<div><pre><code class="language-none">- (BOOL)application:(UIApplication *)application
+openURL:(NSURL *)url
+sourceApplication:(NSString *)sourceApplication
+annotation:(id)annotation {
+return [XDCore HandleXDOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)app
+openURL:(NSURL *)url
+options:(NSDictionary&lt;UIApplicationOpenURLOptionsKey,id&gt; *)options {
+return [XDCore HandleXDOpenURL:url];
+}</code></pre></div>
+
+<p><span id="5接口调用"></p>
+
+<h3 id="toc_15">5.接口调用</h3>
+
+<p><span id="51配置sdk登录选项"></p>
+
+<h4 id="toc_16">5.1.配置SDK登录选项</h4>
+
+<p>心动SDK提供配置QQ、微信登录、游客登录的显示与隐藏以及登录方式。</p>
+
+<p>如不进行配置，SDK将默认显示QQ、微信、游客登录。QQ和微信的登录方式默认为App授权登录，心动SDK也会根据实际情况，将QQ和微信登录方式切换为Web登录，或者不提供对应的登录功能。</p>
+
+<p style="color:red">请勿直接复制以下代码，根据游戏实际需求选择调用以下API</p>
+
+<div><pre><code class="language-none">[XDCore hideGuest]; //隐藏游客登录
+[XDCore hideWX]; //隐藏微信登录
+[XDCore hideQQ]; //隐藏QQ登录
+[XDCore showVC];//显示VeryCD登录（此接口供老游戏兼容，新游戏不建议调用）
+[XDCOre setQQWeb]; //设置QQ为Web登录方式
+[XDCore setWXWeb];//设置微信为Web 扫码登录方式
+</code></pre></div>
+
+<p><span id="52实现sdk协议"></p>
+
+<h4 id="toc_17">5.2.实现SDK协议</h4>
+
+<p>游戏调用SDK接口后，结果以Protocol方式回调给游戏，游戏需要实现XDCallback.h中声明的方法。
+<br/>
+代码示例：</p>
+
+<div><pre><code class="language-none">
+[XDCore setCallBack:[YourCallBack new]];
+
+#import &quot;YourCallBack.h&quot;
+@interface YourCallBack()&lt;XDCallback&gt;
+@end
+
+@implementation YourCallBack
+
+/*初始化成功*/
+- (void)onInitSucceed{
+}
+
+/*初始化失败*/
+- (void)onInitFailed:(nullable NSString*)error_msg{
+}
+
+/*登录成功*/
+/*access_token:登录成功，获取到用户的token。游戏根据token获取用户信息。*/
+- (void)onLoginSucceed:(nonnull NSString*)access_token{
+}
+
+/*登录失败*/
+/*error_msg: 登录失败的报错信息*/
+- (void)onLoginFailed:(nullable NSString*)error_msg{
+}
+
+/*登录取消*/
+- (void)onLoginCanceled{
+}
+
+/*游客绑定成功*/
+/*access_token: 游客升级成功，获取新的token。
+  后续如需使用 token，务必使用回调给的新 token。但已生效的会话无须处理。
+  */
+- (void)onBindGuestSucceed:(nonull NSString*)access_token{
+}
+
+/*登出成功*/
+- (void)onLogoutSucceed{
+}
+
+/*支付完成*/
+- (void)onPayCompleted{
+}
+
+/*支付失败*/
+/*error_msg:支付失败的错误信息*/
+- (void)onPayFailed:(nullable NSString*)error_msg{
+}
+
+/*支付取消*/
+- (void)onPayCanceled{
+}
+</code></pre></div>
+
+<p><span id="53初始化sdk"></p>
+
+<h4 id="toc_18">5.3.初始化SDK</h4>
+
+<p>初始化心动SDK，调用该接口是调用其它功能接口的必要条件。</p>
+
+<div><pre><code class="language-none">/**
+* @param app_id 心动AppID
+* @param aOrientation 屏幕方向，0表示横屏，1表示竖屏
+*/
++ (void)init:(NSString *)app_id orientation:(int)aOrientation;
+</code></pre></div>
+
+<p>调用该接口会触发下列回调。</p>
+<p style="color:red">其他接口请在获取到初始化成功回调之后进行调用。</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>初始化成功</td>
+<td>-(void)onInitSucceed</td>
+</tr>
+<tr>
+<td>初始化失败</td>
+<td>-(void)onInitFailed:(nullable NSString*)error_msg</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="54登录"></p>
+
+<h4 id="toc_19">5.4.登录</h4>
+
+<p>调用该接口进行登录。</p>
+
+<div><pre><code class="language-none">/*登录*/
++ (void)login;</code></pre></div>
+
+<p>调用该接口会触发下列回调。</p>
+<p style="color:red">获取、查看用户信息以及支付接口请在获取到登录成功回调之后调用。</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>登录成功</td>
+<td>- (void)onLoginSucceed:(nonnull NSString*)access_token;</td>
+</tr>
+<tr>
+<td>登录失败</td>
+<td>- (void)onLoginFailed:(nullable NSString*)error_msg;</td>
+</tr>
+<tr>
+<td>登录取消</td>
+<td>- (void)onLoginCanceled;</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="55获取access-token"></p>
+
+<h4 id="toc_20">5.5.获取Access Token</h4>
+
+<p>调用该接口获取当前登录用户的access token。</p>
+
+<div><pre><code class="language-none">/**
+* @return 当前登录用户的access token，无登录用户时，返回空字符串
+*/
++ (nullable NSString *)getAccessToken;</code></pre></div>
+
+<p><span id="56获取当前登录状态"></p>
+
+<h4 id="toc_21">5.6.获取当前登录状态</h4>
+
+<p>调用该接口获取当前登录状态。</p>
+
+<div><pre><code class="language-none">/**
+* @return YES表示已经登录，NO表示未登录
+*/
++ (BOOL)isLoggedIn;
+</code></pre></div>
+
+<p><span id="57打开用户中心"></p>
+
+<h4 id="toc_22">5.7.打开用户中心</h4>
+
+<p>调用该接口打开用户中心界面，用户可以在该界面进行登出和登录操作，游戏注意正确处理回调。在未登录状态，无法打开用户中心。在用户中心中，用户可进行登出操作，此时交互界面将消失。游戏需要提供引导用户重新进行登录的操作界面。</p>
+
+<div><pre><code class="language-none">/*
+* @return YES,开启成功 NO，开启失败
+*/
++ (BOOL)openUserCenter;</code></pre></div>
+
+<p><span id="58发起支付"></p>
+
+<h4 id="toc_23">5.8.发起支付</h4>
+
+<p>调用该接口发起支付。当前版本SDK仅支持AppStore支付。</p>
+
+<div><pre><code class="language-none">/**
+* @param info 支付相关信息，注意key和value都是字符串类型
+*/
++ (void)pay:(nonull NSDictionary*)info
+</code></pre></div>
+
+<p>其中info的字段如下。</p>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>必须</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Product_Name</td>
+<td>是</td>
+<td>商品名称，建议以游戏名称开头，方便财务对账</td>
+</tr>
+<tr>
+<td>Product_Id</td>
+<td>是</td>
+<td>商品ID，到AppStore购买的商品</td>
+</tr>
+<tr>
+<td>Product_Price</td>
+<td>是</td>
+<td>商品价格（单位分），对于AppStore支付，该字段没有用处，但是需要传递真实金额，有多处需要用到</td>
+</tr>
+<tr>
+<td>Sid</td>
+<td>是</td>
+<td>所在服务器ID，不能有特殊字符，服务端支付回调会包含该字段</td>
+</tr>
+<tr>
+<td>Role_Id</td>
+<td>否</td>
+<td>支付角色ID，服务端支付回调会包含该字段</td>
+</tr>
+<tr>
+<td>OrderId</td>
+<td>否</td>
+<td>游戏侧订单号，服务端支付回调会包含该字段</td>
+</tr>
+<tr>
+<td>EXT</td>
+<td>否</td>
+<td>额外信息，最长512个字符，服务端支付回调会包含该字段。</td>
+</tr>
+</tbody>
+</table>
+
+<p>调用该接口会触发下列回调。</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>支付完成</td>
+<td>- (void)onPayCompleted;</td>
+</tr>
+<tr>
+<td>支付失败</td>
+<td>- (void)onPayFailed:(nullable NSString*)error_msg;</td>
+</tr>
+<tr>
+<td>支付取消</td>
+<td>- (void)onPayCanceled;</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="59登出"></p>
+
+<h4 id="toc_24">5.9.登出</h4>
+
+<p>需要注销当前登录用户时调用，该操作不会出现登录界面。</p>
+
+<div><pre><code class="language-none">+ (void)logout;
+</code></pre></div>
+
+<p>调用该接口会触发下列回调</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>登出成功</td>
+<td>- (void)onLogoutSucceed;</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="510游客升级"></p>
+
+<h4 id="toc_25">5.10.游客升级</h4>
+
+<p>当游客账号升级成功时,会触发下列回调。<br/>
+后续如需使用token，务必使用回调给的新token。但已生效的会话无需处理。</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>游客升级成功</td>
+<td>- (void)onGuestBindSucceed:(nonull NSString*)access_token;</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="511微信分享"></p>
+
+<h4 id="toc_26">5.11.微信分享</h4>
+
+<p>调用XDWXShare文件中的以下方法，使用微信分享功能。</p>
+
+<div><pre><code class="language-none">+ (void)WXShareWithObject:(XDWXShareObject*)shareObject;
+</code></pre></div>
+
+<p>XDWXShareObject详细参数说明</p>
+
+<table>
+<thead>
+<tr>
+<th>通用参数</th>
+<th>是否必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>text</td>
+<td>否</td>
+<td>NSString</td>
+<td>分享文字内容</td>
+</tr>
+<tr>
+<td>bText</td>
+<td>是</td>
+<td>BOOL</td>
+<td>分享内容是否为多媒体内容（YES文本内容，NO多媒体内容）</td>
+</tr>
+<tr>
+<td>scene</td>
+<td>是</td>
+<td>int</td>
+<td>分享场景（0对话，1朋友圈，2收藏）</td>
+</tr>
+<tr>
+<td>type</td>
+<td>是</td>
+<td>int</td>
+<td>分享类型（0文本，1图片，2音乐，3视频，4网页）</td>
+</tr>
+<tr>
+<td>title</td>
+<td>否</td>
+<td>NSString</td>
+<td>分享标题</td>
+</tr>
+<tr>
+<td>descriptionStr</td>
+<td>否</td>
+<td>NSString</td>
+<td>分享描述信息</td>
+</tr>
+<tr>
+<td>thumbData</td>
+<td>否</td>
+<td>NSData</td>
+<td>缩略图数据</td>
+</tr>
+<tr>
+<td>thumbPath</td>
+<td>否</td>
+<td>NSString</td>
+<td>缩略图路径</td>
+</tr>
+<tr>
+<td>thumbImage</td>
+<td>否</td>
+<td>UIImage</td>
+<td>缩略图对象（优先级thumbImage&gt;thumbPath&gt;thumbData,若都未进行设置，则不显示缩略图）</td>
+</tr>
+<tr>
+<td>meidaTagName</td>
+<td>否</td>
+<td>NSString</td>
+<td></td>
+</tr>
+<tr>
+<td>messageExt</td>
+<td>否</td>
+<td>NSString</td>
+<td></td>
+</tr>
+<tr>
+<td>messageAction</td>
+<td>否</td>
+<td>NSString</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>以下参数，请根据不同的分享类型（type参数）进行设置</p>
+
+<table>
+<thead>
+<tr>
+<th>图片分享</th>
+<th>是否必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>imageData</td>
+<td>否</td>
+<td>NSData</td>
+<td>分享图片数据</td>
+</tr>
+<tr>
+<td>imageUrl</td>
+<td>否</td>
+<td>NSString</td>
+<td>分享图片Url（imageData、imageUrl不可同时为空）</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<table>
+<thead>
+<tr>
+<th>音乐分享</th>
+<th>是否必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>musicUrl</td>
+<td>是</td>
+<td>NSString</td>
+<td>音乐链接</td>
+</tr>
+<tr>
+<td>musicLowBandUrl</td>
+<td>否</td>
+<td>NSString</td>
+<td>低带宽音乐链接</td>
+</tr>
+<tr>
+<td>musicDataUrl</td>
+<td>否</td>
+<td>NSString</td>
+<td>音乐数据链接</td>
+</tr>
+<tr>
+<td>musicLowBandDataUrl</td>
+<td>否</td>
+<td>NSString</td>
+<td>低带宽状音乐数据链接</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<table>
+<thead>
+<tr>
+<th>视频分享</th>
+<th>是否必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>videoUrl</td>
+<td>是</td>
+<td>NSString</td>
+<td>视频链接</td>
+</tr>
+<tr>
+<td>videoLowBandUrl</td>
+<td>否</td>
+<td>NSString</td>
+<td>低带宽视频链接</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<table>
+<thead>
+<tr>
+<th>网页分享参数</th>
+<th>是否必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>webpageUrl</td>
+<td>是</td>
+<td>NSString</td>
+<td>网页链接</td>
+</tr>
+</tbody>
+</table>
+
+<p>API调用示例
+在分享之前，需要设置分享回调</p>
+
+<div><pre><code class="language-none">#import &lt;XdComPlatform/XDWXShare.h&gt;
+
+@interface YourCallBack()&lt;XDWXShareCallBack&gt;
+
+[XDWXShare setWXShareCallBack:YourCallBack];
+
+XDWXShareObject * obj = [XDWXShareObject shareObject];
+
+obj.text = &quot;text&quot;;
+obj.title = &quot;title&quot;;
+...
+...
+
+[XDWXShare WXShareWithObject:obj];
+</code></pre></div>
+
+<p>调用该接口会触发下列回调。</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>分享成功</td>
+<td>- (void)onWXShareSucceed;</td>
+</tr>
+<tr>
+<td>分享失败</td>
+<td>- (void)onWXShareFailed:(nullable NSString*)error_msg;</td>
+</tr>
+</tbody>
+</table>
+
+<p style = "color:red">
+注意: 在进行分享时，若用户选择留在微信，则无法收到分享回调，此处不可以完全依赖上述回调事件。
+</p>
+
+<p><span id="61服务端对接"></p>
+
+<h3 id="toc_27">6.服务端对接</h3>
+
+<p><span id="61获取用户信息"></p>
+
+<h4 id="toc_28">6.1.获取用户信息</h4>
+
+<p>游戏服务端使用客户端获取的access token，按照下面的方式获取用户信息。</p>
+
+<div><pre><code class="language-none">接口：https://api.xd.com/v1/user
+method：GET
+参数：access_token
+请求示例：https://api.xd.com/v1/user?access_token=1234
+成功判断：返回的HTTP Code为200时表示成功，否则失败
+返回数据格式：application/json
+返回值示例：
+{&quot;id&quot;:&quot;1&quot;&quot;name&quot;:&quot;xdname&quot;,&quot;friendly_name&quot;:&quot;xdfriendly_name&quot;,&quot;client_id&quot;:&quot;abc&quot;,&quot;phone&quot;:&quot;1&quot;,&quot;safety&quot;:false,&quot;site&quot;:&quot;1&quot;}
+id：用户的ID，注意类型是字符串
+name：用户的账号名称
+friendly_name：用户的昵称，如果游戏想要展现用户名称，建议使用该字段
+client_id：该用户在该游戏登录时使用的心动AppID
+phone： 绑定的手机号码
+safety： 账号是否安全/通过设备二次验证（true：安全，false：不安全）
+site：账号类型, 0 =&gt; vc账号，1 =&gt; 心动账号，3 =&gt; qq账号，8 =&gt; 微信账号，注意类型是字符串</code></pre></div>
+
+<p><span id="62处理支付回调"></p>
+
+<h4 id="toc_29">6.2.处理支付回调</h4>
+
+<p>游戏服务端需要提供一个能够处理支付回调的接口，这个接口是申请心动AppID时需要的。处理逻辑中，需要使用一个密钥进行加密验证，该密钥即为心动AppKey。
+当心动平台处有充值成功时，心动服务端会通知到支付回调接口，信息如下。</p>
+
+<div><pre><code class="language-none">method：POST
+数据格式：application/x-www-form-urlencoded
+</code></pre></div>
+
+<p>字段如下。</p>
+
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>order_id</td>
+<td>number</td>
+<td>心动平台的订单号，相同订单号表示是同一笔支付</td>
+</tr>
+<tr>
+<td>payment</td>
+<td>string</td>
+<td>支付方式，appstore或其它（若回调无该字段，则默认为appstore）</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>string</td>
+<td>充值用户ID，注意类型是字符串</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>string</td>
+<td>充值的心动AppID</td>
+</tr>
+<tr>
+<td>app</td>
+<td>string</td>
+<td>同client_id</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>string</td>
+<td>游戏客户端调用充值时传递的Sid字段</td>
+</tr>
+<tr>
+<td>app_order_id</td>
+<td>string</td>
+<td>游戏客户端调用充值时传递的OrderId字段</td>
+</tr>
+<tr>
+<td>role_id</td>
+<td>string</td>
+<td>游戏客户端调用充值时传递的Role_Id字段</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td>string</td>
+<td>支付购买的商品ID</td>
+</tr>
+<tr>
+<td>gold</td>
+<td>number</td>
+<td>支付实际所付金额，单位元。（仅在客户端使用非AppStore支付方式支付时才有该字段）</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>string</td>
+<td>游戏客户端调用充值时传递的EXT字段</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>number</td>
+<td>时间戳，1990年到当前时间的秒数</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>string</td>
+<td>签名校验字段，按照下面的方式进行校验</td>
+</tr>
+</tbody>
+</table>
+
+<p>签名算法示例，使用php语言。</p>
+
+<div><pre><code class="language-none">/**
+* @param params 类型array，支付回调时收到的参数
+* @param appKey 类型string，心动AppKey
+*/
+function verify_sign($params, $appKey) {
+$tmp = $params;
+$sign = $tmp[&#39;sign&#39;];
+unset($tmp[&#39;sign&#39;]);
+ksort($tmp);
+
+return strcasecmp($sign, md5(http_build_query($tmp) . $appKey)) == 0;
+}</code></pre></div>
+
+<p style="color:red">
+需要注意
+<br/>
+1、游戏服务端应该按照order_id进行排重，相同order_id仅生效一次。
+<br/>
+2、游戏服务端成功处理了支付回调后，应当返回字符串“success”，如果是一笔已经处理的重复的订单，也应该返回“success”。
+<br/>
+3、只要通过签名校验的回调，都应该视为合法数据，按照如下逻辑发放道具。A.如果payment字段为appstore，即AppStore支付，直接按照product_id字段进行道具发放；B.如果payment字段为其它值，需要验证gold字段和 product_id 字段是否相符，如果相符，按照product_id发放道具，如果不相符，直接按照gold字段折算成对应的游戏货币发放。
+</p>
+
+
+
+
+</body>
+
+</html>
