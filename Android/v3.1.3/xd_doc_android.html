@@ -573,8 +573,8 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 <h4 id="toc_15">4.6.接入微信分享的处理</h4>
 
-<p style="color:red">使用心动SDK提供的分享功能，可略过该部分。</p>
-<p style="color:red">如果游戏仍需要自行接入微信分享，需进行以下处理。</p>
+<p style="color:red">使用心动SDK提供的分享功能，可略过该部分。</p>
+<p style="color:red">如果游戏仍需要自行接入微信分享，需进行以下处理。</p>
 <p style="color:red">微信分享的微信AppID必须使用心动提供的微信AppID，否则会导致微信登录失败</p>
 
 <p>接入其它SDK提供的微信分享功能时，会被要求在项目中增加一个类“{游戏包名}.wxapi.WXEntryActivity”，这个类可能是复制SDK提供的一个类，或者继承SDK的一个类。无论如何，将其修改为另一个名字，比如“{游戏包名}.wxapi.MYWXEntryActivity”。</p>
@@ -634,21 +634,25 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
         }
 
         if (arg0 instanceof SendAuth.Resp) {
+            if (XDPlatform.isLoggedIn() &amp;&amp; !XDUser.getUser().isGuester()) return;
+            XDPlatform.isIn3rdActivity = false;
             switch (arg0.errCode) {
-            case BaseResp.ErrCode.ERR_OK:
-                String code = ((SendAuth.Resp)arg0).code;
-                Log.d(&quot;微信code&quot;,code);
-                //调用平台登录
-                XDCore.getInstance().wxLogin(code);
-                break;
-            case BaseResp.ErrCode.ERR_USER_CANCEL:
-                Log.d(&quot;微信登录&quot;,&quot;ERR_USER_CANCEL&quot;);
-                break;
-            case BaseResp.ErrCode.ERR_AUTH_DENIED:
-                Log.d(&quot;微信登录&quot;,&quot;ERR_AUTH_DENIED&quot;);
-                break;
-            default:
-                break;
+                case BaseResp.ErrCode.ERR_OK:
+                    String code = ((SendAuth.Resp) arg0).code;
+                    //Log.e(&quot;微信code&quot;,code);
+                    //调用平台登录
+                    XDCore.getInstance().wxLogin(code, &quot;app&quot;);
+                    break;
+                case BaseResp.ErrCode.ERR_USER_CANCEL:
+                    XDPlatform.dismissProgressBar();
+                    Log.d(&quot;微信登录&quot;, &quot;ERR_USER_CANCEL&quot;);
+                    break;
+                case BaseResp.ErrCode.ERR_AUTH_DENIED:
+                    XDPlatform.dismissProgressBar();
+                    Log.d(&quot;微信登录&quot;, &quot;ERR_AUTH_DENIED&quot;);
+                    break;
+                default:
+                    break;
             }
         }
         finish();
@@ -1090,7 +1094,7 @@ XDSDK.logout();
 <table>
 <thead>
 <tr>
-<th>设置值</th>
+<th>类型值</th>
 <th>分享类型</th>
 </tr>
 </thead>
@@ -1121,7 +1125,7 @@ XDSDK.logout();
 
 <p>示例代码</p>
 
-<div><pre><code class="language-none">//分享文字
+<div><pre><code class="language-none">//分享文字
 XDWXShareObject wxShareContent = new XDWXShareObject();
 wxShareContent.setTitle(&quot;文字标题&quot;);
 wxShareContent.setText(&quot;文字内容&quot;);

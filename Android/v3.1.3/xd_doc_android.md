@@ -279,21 +279,25 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
         }
 
         if (arg0 instanceof SendAuth.Resp) {
+            if (XDPlatform.isLoggedIn() && !XDUser.getUser().isGuester()) return;
+            XDPlatform.isIn3rdActivity = false;
             switch (arg0.errCode) {
-            case BaseResp.ErrCode.ERR_OK:
-                String code = ((SendAuth.Resp)arg0).code;
-                Log.d("微信code",code);
-                //调用平台登录
-                XDCore.getInstance().wxLogin(code);
-                break;
-            case BaseResp.ErrCode.ERR_USER_CANCEL:
-                Log.d("微信登录","ERR_USER_CANCEL");
-                break;
-            case BaseResp.ErrCode.ERR_AUTH_DENIED:
-                Log.d("微信登录","ERR_AUTH_DENIED");
-                break;
-            default:
-                break;
+                case BaseResp.ErrCode.ERR_OK:
+                    String code = ((SendAuth.Resp) arg0).code;
+                    //Log.e("微信code",code);
+                    //调用平台登录
+                    XDCore.getInstance().wxLogin(code, "app");
+                    break;
+                case BaseResp.ErrCode.ERR_USER_CANCEL:
+                    XDPlatform.dismissProgressBar();
+                    Log.d("微信登录", "ERR_USER_CANCEL");
+                    break;
+                case BaseResp.ErrCode.ERR_AUTH_DENIED:
+                    XDPlatform.dismissProgressBar();
+                    Log.d("微信登录", "ERR_AUTH_DENIED");
+                    break;
+                default:
+                    break;
             }
         }
         finish();
