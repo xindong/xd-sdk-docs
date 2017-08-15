@@ -625,7 +625,7 @@ XDWXShareObject.SCENE_FAVOURITE | 添加到微信收藏
 
 调用setType()设置分享类型。
 
-设置值 | 分享类型
+类型值 | 分享类型
 --- | ---
 XDWXShareObject.TYPE_TEXT | 文字分享
 XDWXShareObject.TYPE_IMAGE | 图片分享
@@ -638,7 +638,7 @@ XDWXShareObject.TYPE_WEB | 网页分享
 示例代码
 
 ```
-//分享文字
+//分享文字
 XDWXShareObject wxShareContent = new XDWXShareObject();
 wxShareContent.setTitle("文字标题");
 wxShareContent.setText("文字内容");
