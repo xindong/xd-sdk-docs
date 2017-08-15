@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>xd_doc_android</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h2 id="toc_0"><center> 心动SDK（Android）对接文档 </center></h2>
+
+<h3 id="toc_1">目录</h3>
+
+<ul>
+<li><a href="#1%E5%BF%83%E5%8A%A8sdk%E4%BB%8B%E7%BB%8D">1.心动SDK介绍</a>
+
+<ul>
+<li><a href="#11%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B">1.1登录流程</a></li>
+<li><a href="#12%E6%94%AF%E4%BB%98%E6%B5%81%E7%A8%8B">1.2支付流程</a></li>
+<li><a href="#13sdk%E9%9B%86%E6%88%90%E6%B5%81%E7%A8%8B">1.3SDK集成流程</a></li>
+</ul></li>
+<li><a href="#2%E7%94%B3%E8%AF%B7%E5%BF%83%E5%8A%A8appid">2.申请心动AppID</a></li>
+<li><a href="#3%E9%9C%80%E8%A6%81%E9%81%B5%E5%AE%88%E7%9A%84%E8%A7%84%E5%88%99">3.需要遵守的规则</a>
+
+<ul>
+<li><a href="#31%E5%9B%9E%E8%B0%83%E4%BE%9D%E8%B5%96">3.1.回调依赖</a></li>
+</ul></li>
+<li><a href="#4%E6%8E%A5%E5%85%A5sdk">4.接入SDK</a>
+
+<ul>
+<li><a href="#41%E8%8E%B7%E5%8F%96sdk">4.1获取SDK</a></li>
+<li><a href="#42%E6%B7%BB%E5%8A%A0android%E6%94%AF%E6%8C%81%E5%BA%93">4.2添加Android支持库</a></li>
+<li><a href="#43%E6%B7%BB%E5%8A%A0%E9%9C%80%E8%A6%81%E7%9A%84%E6%9D%83%E9%99%90">4.3添加需要的权限</a></li>
+<li><a href="#44%E5%A3%B0%E6%98%8E%E7%9B%B8%E5%85%B3%E7%9A%84activity">4.4声明相关的Activity</a></li>
+<li><a href="#45%E6%8E%A5%E6%94%B6%E8%BF%94%E5%9B%9E%E5%80%BC">4.5接收返回值</a></li>
+<li><a href="#46%E6%8E%A5%E5%85%A5%E5%BE%AE%E4%BF%A1%E5%88%86%E4%BA%AB%E5%A4%84%E7%90%86">4.6接入微信分享处理</a></li>
+</ul></li>
+<li><a href="#5%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8">5.接口调用</a>
+
+<ul>
+<li><a href="#51%E9%85%8D%E7%BD%AEsdk%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9">5.1配置SDK登录选项</a></li>
+<li><a href="#52%E8%AE%BE%E7%BD%AE%E5%9B%9E%E8%B0%83">5.2设置回调</a></li>
+<li><a href="#53%E5%88%9D%E5%A7%8B%E5%8C%96sdk">5.3初始化SDK</a></li>
+<li><a href="#54%E7%99%BB%E5%BD%95">5.4登录</a></li>
+<li><a href="#55%E8%8E%B7%E5%8F%96access-token">5.5获取Access Token</a></li>
+<li><a href="#56%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81">5.6获取当前登录状态</a></li>
+<li><a href="#57%E6%89%93%E5%BC%80%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83">5.7打开用户中心</a></li>
+<li><a href="#58%E5%8F%91%E8%B5%B7%E6%94%AF%E4%BB%98">5.8发起支付</a></li>
+<li><a href="#59%E7%99%BB%E5%87%BA">5.9登出</a></li>
+<li><a href="#510%E6%B8%B8%E5%AE%A2%E5%8D%87%E7%BA%A7">5.10游客升级</a></li>
+<li><a href="#511%E9%80%80%E5%87%BA">5.11退出</a></li>
+<li><a href="#512%E5%BE%AE%E4%BF%A1%E5%88%86%E4%BA%AB">5.12微信分享</a></li>
+</ul></li>
+<li><a href="#6%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AF%B9%E6%8E%A5">6服务端对接</a>
+
+<ul>
+<li><a href="#61%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF">6.1获取用户信息</a></li>
+<li><a href="#62%E5%A4%84%E7%90%86%E6%94%AF%E4%BB%98%E5%9B%9E%E8%B0%83">6.2处理支付回调</a></li>
+</ul></li>
+</ul>
+
+<p><span id="1心动sdk介绍"></p>
+
+<h3 id="toc_2">1.心动SDK介绍</h3>
+
+<p>心动SDK主要为游戏提供登录，支付等功能。登录流程和支付流程都需要客户端和服务端同时参与。</p>
+
+<p><span id="11登录流程"></p>
+
+<h4 id="toc_3">1.1.登录流程</h4>
+
+<p><image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/01.png"></image></p>
+
+<p><span id="12支付流程"></p>
+
+<h4 id="toc_4">1.2.支付流程</h4>
+
+<p><image src="https://static.tapdb.net/web/res/img/upload/2017/06/27/02.png"></image></p>
+
+<p><span id="13sdk集成流程"></p>
+
+<h4 id="toc_5">1.3.SDK集成流程</h4>
+
+<p><image src="https://static.tapdb.net/web/res/img/upload/2017/07/27/01.png"></image></p>
+
+<p><span id="2申请心动appid"></p>
+
+<h3 id="toc_6">2.申请心动AppID</h3>
+
+<p>参阅“心动AppID申请介绍”文档，申请心动AppID，获得心动AppID、心动AppKey、微信AppID、QQ AppID、Ping++ ID。其中心动AppID主要是客户端对接时使用，AppKey主要是服务端对接支付回调时使用。</p>
+
+<p style="color:red">注意，如果游戏需要自行接入微信分享功能，必须使用心动提供的微信AppID，否则会导致微信登录失败。
+</p>
+
+<p><span id="3需要遵守的规则"></p>
+
+<h3 id="toc_7">3.需要遵守的规则</h3>
+
+<p>对接过程中，为了避免出现一些奇怪的问题，无特殊需求情况下，请尽量遵守下面的规则。
+</p>
+
+<p><span id="31回调依赖"></p>
+
+<h4 id="toc_8">3.1.回调依赖</h4>
+
+<p>游戏调用SDK的功能，SDK通常会以回调形式通知到游戏，除了必须依赖的回调（如登录成功回调），其它回调尽可能不依赖。此场景适用于登录、打开用户中心、支付。</p>
+
+<p>比如游戏登录，通常是游戏提供一个登录按钮，用户点击后调用SDK登录，此时有两种处理方式。A、点击后，游戏隐藏登录按钮或使用loading图标盖住，等收到SDK登录失败回调时，才会再次展现登录按钮或移除loading。B、无论是否收到回调，都保证按钮处理可点状态。</p>
+
+<p>建议游戏使用后者，防止意外情况下，流程无法走通，用户无法继续操作的情况。另外也可以采用后者的优化版，即用户点击后，仅屏蔽按钮1秒钟，这样可以防止用户反复点击导致SDK接口被反复调用。</p>
+
+<p>总之游戏尽可能保证功能一直处于可用状态，而不依赖SDK的状态。</p>
+
+<p><span id="4接入sdk"></p>
+
+<h3 id="toc_9">4.接入SDK</h3>
+
+<p><span id="41获取sdk"></p>
+
+<h4 id="toc_10">4.1.获取SDK</h4>
+
+<p>从心动平台处获取SDK，其中SDKLib目录就是心动SDK项目，可以直接导入eclipse中作为Library项目。如果不是使用eclipse作为IDE的项目，需要保证相关的文件都被正确导入到项目中。SDKLib中的主要文件或目录用途如下。</p>
+
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>libs</td>
+<td>包含心动SDK的库和其它依赖库</td>
+</tr>
+<tr>
+<td>res</td>
+<td>包含心动SDK需要的资源文件</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="42添加android支持库"></p>
+
+<h4 id="toc_11">4.2.添加Android支持库</h4>
+
+<p>添加Android v4支持库android-support-v4.jar到项目中。</p>
+
+<p><span id="43添加需要的权限"></p>
+
+<h4 id="toc_12">4.3.添加需要的权限</h4>
+
+<div><pre><code class="language-none">    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;
+    &lt;!-- Ping++ --&gt;
+    &lt;uses-permission android:name=&quot;android.permission.NFC&quot; /&gt;
+    &lt;uses-permission-sdk-23 android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;
+    &lt;uses-permission-sdk-23 android:name=&quot;android.permission.NFC&quot; /&gt;</code></pre></div>
+
+<p><span id="44声明相关的activity"></p>
+
+<h4 id="toc_13">4.4.声明相关的Activity</h4>
+
+<div><pre><code class="language-diff">&lt;application&gt;
+    &lt;activity
+        android:name=&quot;com.xd.sdklib.helper.XDStartView&quot;
+        android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar.Fullscreen&quot; 
+        android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot; /&gt;
+    &lt;activity
+        android:name=&quot;com.xd.sdklib.helper.XDPayActivity&quot;
+        android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar.Fullscreen&quot;
+        android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot;  /&gt;
+    &lt;activity
+        android:name=&quot;com.xd.sdklib.helper.XDViewActivity&quot;
+        android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar.Fullscreen&quot;
+        android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot; /&gt;
+    &lt;activity
+        android:name=&quot;com.xd.sdklib.helper.XDWebView&quot;
+        android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar.Fullscreen&quot; /&gt;
+    &lt;activity
+        android:name=&quot;com.xd.sdklib.helper.WXEntryActivity&quot;
+        android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar.Fullscreen&quot; /&gt;
+
+    &lt;!-- 微信登录，仅在游戏不接入其它微信分享SDK时使用该方法 --&gt;
+    &lt;activity-alias
+        android:name=&quot;.wxapi.WXEntryActivity&quot;
+        android:exported=&quot;true&quot;
+        android:targetActivity=&quot;com.xd.sdklib.helper.WXEntryActivity&quot;/&gt;
+
+    &lt;!-- 微信登录和分享，游戏接入了其它微信分享SDK时必须使用该方法，并按照文章后面的内容进行处理
+    &lt;activity
+        android:name=&quot;.wxapi.WXEntryActivity&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:exported=&quot;true&quot;/&gt;
+    --&gt;
+
+    &lt;!-- Ping++ SDK --&gt;
+    &lt;activity
+        android:name=&quot;com.pingplusplus.android.PaymentActivity&quot;
+        android:configChanges=&quot;orientation|screenSize&quot;
+        android:launchMode=&quot;singleTop&quot;
+        android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar.Fullscreen&quot; /&gt;
+
+    &lt;!-- 支付宝 --&gt;
+    &lt;activity
+        android:name=&quot;com.alipay.sdk.app.H5PayActivity&quot;
+        android:configChanges=&quot;orientation|keyboardHidden|navigation&quot;
+        android:exported=&quot;false&quot;
+        android:screenOrientation=&quot;portrait&quot; /&gt;
+    &lt;activity
+        android:name=&quot;com.alipay.sdk.auth.AuthActivity&quot;
+        android:configChanges=&quot;orientation|keyboardHidden|navigation&quot;
+        android:exported=&quot;false&quot;
+        android:screenOrientation=&quot;portrait&quot; /&gt;
+
+    &lt;!-- 微信支付 --&gt;
+    &lt;activity-alias
+        android:name=&quot;.wxapi.WXPayEntryActivity&quot;
+        android:exported=&quot;true&quot;
+        android:targetActivity=&quot;com.pingplusplus.android.PaymentActivity&quot; /&gt;
+
+    &lt;!-- QQ登录 --&gt;
+    &lt;activity
+        android:name=&quot;com.tencent.tauth.AuthActivity&quot;
+        android:noHistory=&quot;true&quot;
+        android:launchMode=&quot;singleTask&quot; /&gt;
+    &lt;activity
+        android:name=&quot;com.tencent.connect.common.AssistActivity&quot;
+        android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar&quot;
+        android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot; /&gt;
+&lt;/application&gt;
+
+</code></pre></div>
+
+<p><span id="45接收返回值"></p>
+
+<h4 id="toc_14">4.5.接收返回值</h4>
+
+<p>在初始化XDSDK的Activity中，增加如下处理。</p>
+
+<div><pre><code class="language-none">@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    XDSDK.onActivityResultData(requestCode, resultCode, data);
+    super.onActivityResult(requestCode, resultCode, data);
+}</code></pre></div>
+
+<p><span id="46接入微信分享处理"></p>
+
+<h4 id="toc_15">4.6.接入微信分享的处理</h4>
+
+<p style="color:red">使用心动SDK提供的分享功能，可略过该部分。</p>
+<p style="color:red">如果游戏仍需要自行接入微信分享，需进行以下处理。</p>
+<p style="color:red">微信分享的微信AppID必须使用心动提供的微信AppID，否则会导致微信登录失败</p>
+
+<p>接入其它SDK提供的微信分享功能时，会被要求在项目中增加一个类“{游戏包名}.wxapi.WXEntryActivity”，这个类可能是复制SDK提供的一个类，或者继承SDK的一个类。无论如何，将其修改为另一个名字，比如“{游戏包名}.wxapi.MYWXEntryActivity”。</p>
+<p>需要按照文章前面Activity配置中的注释说明，修改Activity配置内容，并且需要在游戏项目中增加“{游戏包名}.wxapi.WXEntryActivity”类，内容如下，注意替换代码中花括号括起来的需要游戏自定的内容。</p>
+
+<div><pre><code class="language-none">package {游戏的包名(AndroidManifest.xml中的package)}.wxapi;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+
+import com.tencent.mm.sdk.modelbase.BaseReq;
+import com.tencent.mm.sdk.modelbase.BaseResp;
+import com.tencent.mm.sdk.modelmsg.SendAuth;
+import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.xd.xdsdk.XDCore;
+
+public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
+
+    private IWXAPI api;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        this.api = WXAPIFactory.createWXAPI(this, XDCore.getInstance().getWXAppId(),false);
+        this.api.handleIntent(getIntent(), this);
+    }
+    
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        
+        setIntent(intent);
+        api.handleIntent(intent, this);
+    }
+    
+    @Override
+    public void onReq(BaseReq arg0) {
+    }
+
+    @Override
+    public void onResp(BaseResp arg0) {
+        if (arg0 instanceof SendMessageToWX.Resp) {
+            Intent intent = new Intent();
+            String str = getPackageName() + &quot;.wxapi.{被改名的分享类名}&quot; // 替换后的例子&quot;wxapi.MYWXEntryActivity&quot;
+            intent.setClassName(getPackageName(), str);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                intent.putExtras(getIntent());
+                startActivity(intent);
+            }
+            finish();
+            return;
+        }
+
+        if (arg0 instanceof SendAuth.Resp) {
+            switch (arg0.errCode) {
+            case BaseResp.ErrCode.ERR_OK:
+                String code = ((SendAuth.Resp)arg0).code;
+                Log.d(&quot;微信code&quot;,code);
+                //调用平台登录
+                XDCore.getInstance().wxLogin(code);
+                break;
+            case BaseResp.ErrCode.ERR_USER_CANCEL:
+                Log.d(&quot;微信登录&quot;,&quot;ERR_USER_CANCEL&quot;);
+                break;
+            case BaseResp.ErrCode.ERR_AUTH_DENIED:
+                Log.d(&quot;微信登录&quot;,&quot;ERR_AUTH_DENIED&quot;);
+                break;
+            default:
+                break;
+            }
+        }
+        finish();
+    }
+}</code></pre></div>
+
+<p><span id="5接口调用"></p>
+
+<h3 id="toc_16">5.接口调用</h3>
+
+<p>所有接口设计为静态方法，在com.xd.xdsdk.XDSDK中调用。</p>
+
+<p><span id="51配置sdk登录选项"></p>
+
+<h4 id="toc_17">5.1.配置SDK登录选项</h4>
+
+<p>心动SDK提供配置QQ、微信登录、游客登录的显示与隐藏以及登录方式。</p>
+
+<p>如不进行配置，SDK将默认显示QQ、微信、游客登录。QQ和微信的登录方式默认为App授权登录，心动SDK会根据QQ和微信的安装情况，将QQ和微信登录方式切换为Web登录，或者不提供对应的登录功能。</p>
+
+<p style="color:red">请勿直接复制以下代码，根据游戏实际需求选择调用以下API</p>
+
+<div><pre><code class="language-none">XDSDK.hideGuest()   //隐藏游客登录
+XDSDK.hideWX()      //隐藏微信登录
+XDSDK.hideQQ()      //隐藏QQ登录
+XDSDK.showVC()      //显示VeryCD登录（此接口供老游戏兼容，新游戏不建议调用）
+XDSDK.setQQWeb()    //设置QQ为Web登录方式
+XDSDK.setWXWeb()    //设置微信为Web 扫码登录方式</code></pre></div>
+
+<p><span id="52设置回调"></p>
+
+<h4 id="toc_18">5.2.设置回调</h4>
+
+<p>游戏调用心动SDK的接口后，大部分情况都是通过回调的形式将结果返回给游戏，所以需要先设置对应的回调函数。</p>
+
+<p>代码示例：</p>
+
+<div><pre><code class="language-none">XDSDK.setCallback(new XDCallback() {
+            //初始化成功
+            @Override
+            public void onInitSucceed() {
+
+            }
+            //初始化失败
+            @Override
+            public void onInitFailed(String msg) {
+
+            }
+            //登录成功
+            @Override
+            public void onLoginSucceed(String token) {
+                
+            }
+
+            //登录失败
+            @Override
+            public void onLoginFailed(String msg) {
+                
+            }
+
+            //登录取消
+            @Override
+            public void onLoginCanceled() {
+
+            }
+
+            //游客绑定成功
+            @Override
+            public void onGuestBindSucceed(String token) {
+
+            }
+            //登出成功
+            @Override
+            public void onLogoutSucceed() {
+
+            }
+            //支付完成
+            @Override
+            public void onPayCompleted() {
+
+            }
+            //支付失败
+            @Override
+            public void onPayFailed(String msg) {
+
+            }
+            //支付取消
+            @Override
+            public void onPayCanceled() {
+
+            }
+        });</code></pre></div>
+
+<p><span id="53初始化sdk"></p>
+
+<h4 id="toc_19">5.3.初始化SDK</h4>
+
+<p>初始化心动SDK，调用该接口是调用其它功能接口的必要条件。</p>
+
+<div><pre><code class="language-none">/**
+ * @param activity 游戏的主activity
+ * @param appid 心动AppID
+ * @param aOrientation 屏幕方向，0表示横屏，1表示竖屏
+ */
+public static void initSDK(Activity activity, String appid, int aOrientation)</code></pre></div>
+
+<p>示例代码
+<code>
+XDSDK.initSDK(this, &quot;xxxxxxxxxxxxxx&quot;, 0);
+</code>
+<p>调用该接口会触发下列回调。</p>
+<p style="color:red">其他接口请在获取到初始化成功回调之后进行调用。</p></p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>初始化成功</td>
+<td>public void onInitSucceed()</td>
+</tr>
+<tr>
+<td>初始化失败</td>
+<td>public void onInitFailed(String msg)</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="54登录"></p>
+
+<h4 id="toc_20">5.4.登录</h4>
+
+<p>调用该接口进行登录。</p>
+
+<div><pre><code class="language-none">public static void login()</code></pre></div>
+
+<p>示例代码
+<code>
+XDSDK.login();
+</code></p>
+
+<p>调用该接口会触发下列回调。</p>
+<p style="color:red">获取、查看用户信息以及支付接口请在获取到登录成功回调之后调用。</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>登录成功</td>
+<td>public void onLoginSucceed(String token)</td>
+</tr>
+<tr>
+<td>登录失败</td>
+<td>public void onLoginFailed(String msg)</td>
+</tr>
+<tr>
+<td>登录取消</td>
+<td>public void onLoginCanceled()</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="55获取access-token"></p>
+
+<h4 id="toc_21">5.5.获取Access Token</h4>
+
+<p>调用该接口获取当前登录用户的access token。</p>
+
+<div><pre><code class="language-none">public static String getAccessToken()</code></pre></div>
+
+<p>代码示例
+<code>
+XDSDK.getAccessToken()
+</code></p>
+
+<p><span id="56获取当前登录状态"></p>
+
+<h4 id="toc_22">5.6.获取当前登录状态</h4>
+
+<p>调用该接口获取当前登录状态。</p>
+
+<div><pre><code class="language-none">public boolean isLoggedIn()</code></pre></div>
+
+<p>代码示例
+<code>
+XDSDK.isLoggedIn()
+</code></p>
+
+<p><span id="57打开用户中心"></p>
+
+<h4 id="toc_23">5.7.打开用户中心</h4>
+
+<p>调用该接口打开用户中心界面，用户可以在该界面进行登出和登录操作，游戏注意正确处理回调。在未登录状态，无法打开用户中心。在用户中心中，用户可进行登出操作，此时交互界面将消失。游戏需要提供引导用户重新进行登录的操作界面。</p>
+
+<div><pre><code class="language-none">/**
+* @return false表示尚未登录，重复调用默认为成功
+*/
+public static boolean openUserCenter()</code></pre></div>
+
+<p>代码示例
+<code>
+XDSDK.openUserCenter()
+</code></p>
+
+<p><span id="58发起支付"></p>
+
+<h4 id="toc_24">5.8.发起支付</h4>
+
+<p>调用该接口发起支付。
+<p style='color:red'>不保证在任何情况下都能收到回调，请勿直接使用SDK返回的支付结果作为最终判定订单状态的依据。</p></p>
+
+<div><pre><code class="language-none">/**
+* @param info 支付相关信息，注意key和value都是字符串类型
+*/
+public static boolean pay(Map&lt;String, String&gt; info) </code></pre></div>
+
+<p>其中info的字段如下。</p>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>必须</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Product_Name</td>
+<td>是</td>
+<td>商品名称，建议以游戏名称开头，方便财务对账</td>
+</tr>
+<tr>
+<td>Product_Id</td>
+<td>是</td>
+<td>商品ID</td>
+</tr>
+<tr>
+<td>Product_Price</td>
+<td>是</td>
+<td>商品价格（单位分）</td>
+</tr>
+<tr>
+<td>Sid</td>
+<td>是</td>
+<td>所在服务器ID，不能有特殊字符，服务端支付回调会包含该字段</td>
+</tr>
+<tr>
+<td>Role_Id</td>
+<td>否</td>
+<td>支付角色ID，服务端支付回调会包含该字段</td>
+</tr>
+<tr>
+<td>OrderId</td>
+<td>否</td>
+<td>游戏侧订单号，服务端支付回调会包含该字段</td>
+</tr>
+<tr>
+<td>EXT</td>
+<td>否</td>
+<td>额外信息，最长512个字符，服务端支付回调会包含该字段。</td>
+</tr>
+</tbody>
+</table>
+
+<p>调用该接口会触发下列回调。</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>支付完成</td>
+<td>public void onPayCompleted()</td>
+</tr>
+<tr>
+<td>支付失败</td>
+<td>public void onPayFailed(String msg)</td>
+</tr>
+<tr>
+<td>支付取消</td>
+<td>public void onPayCanceled()</td>
+</tr>
+</tbody>
+</table>
+
+<p>示例代码</p>
+
+<div><pre><code class="language-none">Map&lt;String, String&gt; info = new HashMap&lt;String, String&gt;();
+info.put(&quot;OrderId&quot;, &quot;1234567890123456789012345678901234567890&quot;);
+info.put(&quot;Product_Price&quot;, &quot;1&quot;);
+info.put(&quot;EXT&quot;, &quot;abcd|efgh|1234|5678&quot;);
+info.put(&quot;Sid&quot;, &quot;2&quot;);
+info.put(&quot;Role_Id&quot;, &quot;3&quot;);
+info.put(&quot;Product_Id&quot;, &quot;4&quot;);
+info.put(&quot;Product_Name&quot;, &quot;648大礼包&quot;);
+XDSDK.pay(info);</code></pre></div>
+
+<p><span id="59登出"></p>
+
+<h4 id="toc_25">5.9.登出</h4>
+
+<p>需要注销当前登录用户时调用，该操作不会出现登录界面。</p>
+
+<div><pre><code class="language-none">public static void logout() </code></pre></div>
+
+<p>调用该接口会触发下列回调</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>登出成功</td>
+<td>public void onLogoutSucceed()</td>
+</tr>
+</tbody>
+</table>
+
+<p>示例代码
+<code>
+XDSDK.logout();
+</code></p>
+
+<p><span id="510游客升级"></p>
+
+<h4 id="toc_26">5.10.游客升级</h4>
+
+<p>当游客账号升级成功时,会触发下列回调。<br/>
+后续如需使用token，务必使用回调给的新token。但已生效的会话无需处理。</p>
+
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回调方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>游客升级成功</td>
+<td>public void onGuestBindSucceed(String token)</td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="511退出"></p>
+
+<h4 id="toc_27">5.11.退出</h4>
+
+<p>调用该方法时，弹出确认框供用户选择是否退出。</p>
+
+<div><pre><code class="language-none">public static void exit(ExitCallback callback)</code></pre></div>
+
+<p>示例代码</p>
+
+<div><pre><code class="language-none">XDSDK.exit(new ExitCallback() {
+    @Override
+    public void onConfirm() {
+        super.onConfirm();
+    }
+
+    @Override
+    public void onCancle() {
+        super.onCancle();
+    }
+});</code></pre></div>
+
+<p><span id="512微信分享"></p>
+
+<h4 id="toc_28">5.12.微信分享</h4>
+
+<p>调用心动SDK微信分享功能后，通过该回调通知分享结果。</p>
+
+<p>示例代码 </p>
+
+<div><pre><code class="language-none">XDWXShare.setWXShareCallBack(new XDWXShare.XDWXShareCallback() {
+    @Override
+    public void onWXShareSucceed() {
+
+    }
+    @Override
+    public void onWXShareFailed(String msg) {
+
+    }
+});</code></pre></div>
+
+<p>分享或收藏的目标场景，通过调用setScene()设置scene场景值实现。</p>
+
+<table>
+<thead>
+<tr>
+<th>场景值</th>
+<th>目标场景</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>XDWXShareObject.SCENE_SESSION</td>
+<td>发送到聊天界面</td>
+</tr>
+<tr>
+<td>XDWXShareObject.SCENE_TIMELINE</td>
+<td>发送到朋友圈</td>
+</tr>
+<tr>
+<td>XDWXShareObject.SCENE_FAVOURITE</td>
+<td>添加到微信收藏</td>
+</tr>
+</tbody>
+</table>
+
+<p>调用setType()设置分享类型。</p>
+
+<table>
+<thead>
+<tr>
+<th>设置值</th>
+<th>分享类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>XDWXShareObject.TYPE_TEXT</td>
+<td>文字分享</td>
+</tr>
+<tr>
+<td>XDWXShareObject.TYPE_IMAGE</td>
+<td>图片分享</td>
+</tr>
+<tr>
+<td>XDWXShareObject.TYPE_MUSIC</td>
+<td>音乐分享</td>
+</tr>
+<tr>
+<td>XDWXShareObject.TYPE_VIDEO</td>
+<td>视频分享</td>
+</tr>
+<tr>
+<td>XDWXShareObject.TYPE_WEB</td>
+<td>网页分享</td>
+</tr>
+</tbody>
+</table>
+
+<p>示例代码</p>
+
+<div><pre><code class="language-none">//分享文字
+XDWXShareObject wxShareContent = new XDWXShareObject();
+wxShareContent.setTitle(&quot;文字标题&quot;);
+wxShareContent.setText(&quot;文字内容&quot;);
+wxShareContent.setDescription(&quot;文字描述&quot;);
+wxShareContent.setScene(XDWXShareObject.SCENE_TIMELINE); //设置目标场景
+wxShareContent.setType(XDWXShareObject.TYPE_TEXT);
+XDWXShare.share(wxShareContent);
+
+//分享图片 (支持传入本地路径和Bitmap)
+XDWXShareObject wxShareContent = new XDWXShareObject();
+wxShareContent.setTitle(&quot;图片标题&quot;);
+wxShareContent.setDescription(&quot;图片描述&quot;);
+wxShareContent.setImage(path + &quot;/1.png&quot;);  //需要分享的图片，可传入Bitmap或本地路径
+wxShareContent.setThumb(path + &quot;/2.png&quot;); //预览图，可传入Bitmap或本地路径
+wxShareContent.setScene(XDWXShareObject.SCENE_TIMELINE); //设置目标场景
+wxShareContent.setType(XDWXShareObject.TYPE_IMAGE);
+XDWXShare.share(wxShareContent);
+
+//分享音乐
+XDWXShareObject wxShareContent = new XDWXShareObject();
+wxShareContent.setTitle(&quot;音乐标题&quot;);
+wxShareContent.setDescription(&quot;音乐描述&quot;);
+wxShareContent.setMusicUrl(&quot;音乐url&quot;);
+wxShareContent.setThumb(path + &quot;/2.png&quot;); //预览图，可传入Bitmap或本地路径
+wxShareContent.setScene(XDWXShareObject.SCENE_TIMELINE); //设置目标场景
+wxShareContent.setType(XDWXShareObject.TYPE_MUSIC);
+XDWXShare.share(wxShareContent);
+
+//分享视频
+XDWXShareObject wxShareContent = new XDWXShareObject();
+wxShareContent.setTitle(&quot;视频标题&quot;);
+wxShareContent.setDescription(&quot;视频描述&quot;);
+wxShareContent.setVideoUrl(&quot;视频url&quot;);
+wxShareContent.setThumb(path + &quot;/2.png&quot;); //预览图，可传入Bitmap或本地路径
+wxShareContent.setScene(XDWXShareObject.SCENE_TIMELINE); //设置目标场景
+wxShareContent.setType(XDWXShareObject.TYPE_VIDEO);
+XDWXShare.share(wxShareContent);
+
+//分享网页
+XDWXShareObject wxShareContent = new XDWXShareObject();
+wxShareContent.setTitle(&quot;网页标题&quot;);
+wxShareContent.setDescription(&quot;网页描述&quot;);
+wxShareContent.setWebPageUrl(&quot;网页url&quot;);
+wxShareContent.setThumb(path + &quot;/2.png&quot;);//预览图，可传入Bitmap或本地路径
+wxShareContent.setScene(XDWXShareObject.SCENE_SESSION); //设置目标场景
+wxShareContent.setType(XDWXShareObject.TYPE_WEB);
+XDWXShare.share(wxShareContent);</code></pre></div>
+
+<p><span id="6服务端对接"></p>
+
+<h3 id="toc_29">6.服务端对接</h3>
+
+<p><span id="61获取用户信息"></p>
+
+<h4 id="toc_30">6.1.获取用户信息</h4>
+
+<p>游戏服务端使用客户端获取的access token，按照下面的方式获取用户信息。</p>
+
+<div><pre><code class="language-diff">接口：https://api.xd.com/v1/user
+method：GET
+参数：access_token
+请求示例：https://api.xd.com/v1/user?access_token=1234
+成功判断：返回的HTTP Code为200时表示成功，否则失败
+返回数据格式：application/json
+返回值示例：
+{&quot;id&quot;:&quot;1&quot;&quot;name&quot;:&quot;xdname&quot;,&quot;friendly_name&quot;:&quot;xdfriendly_name&quot;,&quot;client_id&quot;:&quot;abc&quot;,&quot;phone&quot;:&quot;1&quot;,&quot;safety&quot;:false,&quot;site&quot;:&quot;1&quot;}
+id：用户的ID
+- 注意类型是字符串
+name：用户的账号名称
+friendly_name：用户的昵称，如果游戏想要展现用户名称，建议使用该字段
+client_id：该用户在该游戏登录时使用的心动AppID
+phone： 绑定的手机号码
+safety： 账号是否安全/通过设备二次验证（true：安全，false：不安全）
+site：账号类型, 0 =&gt; vc账号，1 =&gt; 心动账号，3 =&gt; qq账号，8 =&gt; 微信账号，注意类型是字符串</code></pre></div>
+
+<p><span id="62处理支付回调"> </p>
+
+<h4 id="toc_31">6.2.处理支付回调</h4>
+
+<p>游戏服务端需要提供一个能够处理支付回调的接口，这个接口是申请心动AppID时需要的。处理逻辑中，需要使用一个密钥进行加密验证，该密钥即为心动AppKey。
+当心动平台处有充值成功时，心动服务端会通知到支付回调接口，信息如下。</p>
+
+<div><pre><code class="language-none">method：POST
+数据格式：application/x-www-form-urlencoded
+</code></pre></div>
+
+<p>字段如下。</p>
+
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>order_id</td>
+<td>number</td>
+<td>心动平台的订单号，相同订单号表示是同一笔支付</td>
+</tr>
+<tr>
+<td>payment</td>
+<td>string</td>
+<td>支付方式，appstore或其它（若回调无该字段，则默认为appstore）</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>string</td>
+<td>充值用户ID <font style="color:red">注意类型是字符串</font></td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>string</td>
+<td>充值的心动AppID</td>
+</tr>
+<tr>
+<td>app</td>
+<td>string</td>
+<td>同client_id</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>string</td>
+<td>游戏客户端调用充值时传递的Sid字段</td>
+</tr>
+<tr>
+<td>app_order_id</td>
+<td>string</td>
+<td>游戏客户端调用充值时传递的OrderId字段</td>
+</tr>
+<tr>
+<td>role_id</td>
+<td>string</td>
+<td>游戏客户端调用充值时传递的Role_Id字段</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td>string</td>
+<td>支付购买的商品ID</td>
+</tr>
+<tr>
+<td>gold</td>
+<td>number</td>
+<td>支付实际所付金额，单位元。（仅在客户端使用非AppStore支付方式支付时才有该字段）</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>string</td>
+<td>游戏客户端调用充值时传递的EXT字段</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>number</td>
+<td>时间戳，1990年到当前时间的秒数</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>string</td>
+<td>签名校验字段，按照下面的方式进行校验</td>
+</tr>
+</tbody>
+</table>
+
+<p>签名算法示例，使用php语言。</p>
+
+<div><pre><code class="language-none">/**
+* @param params 类型array，支付回调时收到的参数
+* @param appKey 类型string，心动AppKey
+*/
+function verify_sign($params, $appKey) {
+$tmp = $params;
+$sign = $tmp[&#39;sign&#39;];
+unset($tmp[&#39;sign&#39;]);
+ksort($tmp);
+
+return strcasecmp($sign, md5(http_build_query($tmp) . $appKey)) == 0;
+}</code></pre></div>
+
+<p style="color:red">
+需要注意
+</p>
+<p style="color:red">游戏服务端应该按照order_id进行排重，相同order_id仅生效一次<p>
+<p style="color:red">游戏服务端成功处理了支付回调后，应当返回字符串“success”，如果是一笔已经处理的重复的订单，也应该返回“success”。</p>
+<p style="color:red">只要通过签名校验的回调，都应该视为合法数据，按照如下逻辑发放道具。A.如果payment字段为appstore，即AppStore支付，直接按照product_id字段进行道具发放；B.如果payment字段为其它值，需要验证gold字段和 product_id 字段是否相符，如果相符，按照product_id发放道具，如果不相符，直接按照gold字段折算成对应的游戏货币发放。</p>
+
+
+
+
+</body>
+
+</html>
